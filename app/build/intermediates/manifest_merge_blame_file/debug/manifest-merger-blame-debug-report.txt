@@ -12,36 +12,36 @@
 12    APIs.
 13    -->
 14    <uses-sdk
-14-->/Users/nunocaseiro/SSC/ProjectPoses/app/src/main/AndroidManifest.xml:12:5-15:63
+14-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:12:5-15:63
 15        android:minSdkVersion="16"
-15-->/Users/nunocaseiro/SSC/ProjectPoses/app/src/main/AndroidManifest.xml:12:5-15:63
+15-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:12:5-15:63
 16        android:targetSdkVersion="30" />
-16-->/Users/nunocaseiro/SSC/ProjectPoses/app/src/main/AndroidManifest.xml:12:5-15:63
+16-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:12:5-15:63
 17
 18    <uses-feature android:name="android.hardware.camera" />
-18-->/Users/nunocaseiro/SSC/ProjectPoses/app/src/main/AndroidManifest.xml:17:5-59
-18-->/Users/nunocaseiro/SSC/ProjectPoses/app/src/main/AndroidManifest.xml:17:19-57
+18-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:17:5-59
+18-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:17:19-57
 19
 20    <uses-permission android:name="android.permission.INTERNET" />
-20-->/Users/nunocaseiro/SSC/ProjectPoses/app/src/main/AndroidManifest.xml:19:5-66
-20-->/Users/nunocaseiro/SSC/ProjectPoses/app/src/main/AndroidManifest.xml:19:22-64
+20-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:19:5-66
+20-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:19:22-64
 21    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-21-->/Users/nunocaseiro/SSC/ProjectPoses/app/src/main/AndroidManifest.xml:20:5-80
-21-->/Users/nunocaseiro/SSC/ProjectPoses/app/src/main/AndroidManifest.xml:20:22-78
+21-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:20:5-80
+21-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:20:22-78
 22    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-22-->/Users/nunocaseiro/SSC/ProjectPoses/app/src/main/AndroidManifest.xml:21:5-79
-22-->/Users/nunocaseiro/SSC/ProjectPoses/app/src/main/AndroidManifest.xml:21:22-77
+22-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:21:5-79
+22-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:21:22-77
 23    <uses-permission android:name="android.permission.CAMERA" />
-23-->/Users/nunocaseiro/SSC/ProjectPoses/app/src/main/AndroidManifest.xml:22:5-64
-23-->/Users/nunocaseiro/SSC/ProjectPoses/app/src/main/AndroidManifest.xml:22:22-62
+23-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:22:5-64
+23-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:22:22-62
 24
 25    <queries>
-25-->/Users/nunocaseiro/SSC/ProjectPoses/app/src/main/AndroidManifest.xml:67:5-71:15
+25-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:67:5-71:15
 26        <intent>
-26-->/Users/nunocaseiro/SSC/ProjectPoses/app/src/main/AndroidManifest.xml:68:9-70:18
+26-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:68:9-70:18
 27            <action android:name="android.media.action.IMAGE_CAPTURE" />
-27-->/Users/nunocaseiro/SSC/ProjectPoses/app/src/main/AndroidManifest.xml:69:13-73
-27-->/Users/nunocaseiro/SSC/ProjectPoses/app/src/main/AndroidManifest.xml:69:21-70
+27-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:69:13-73
+27-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:69:21-70
 28        </intent>
 29    </queries>
 30
@@ -52,81 +52,81 @@
 33-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/b0b07d668fb05669fea93be346cdaca2/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:25:22-76
 34
 35    <application
-35-->/Users/nunocaseiro/SSC/ProjectPoses/app/src/main/AndroidManifest.xml:24:5-66:19
+35-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:24:5-66:19
 36        android:name="androidx.multidex.MultiDexApplication"
-36-->/Users/nunocaseiro/SSC/ProjectPoses/app/src/main/AndroidManifest.xml:25:9-61
+36-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:25:9-61
 37        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 37-->[androidx.core:core:1.3.1] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/9ce39da31d83914ee9b08fa3e90e05b5/core-1.3.1/AndroidManifest.xml:24:18-86
 38        android:debuggable="true"
 39        android:icon="@drawable/logo_mlkit"
-39-->/Users/nunocaseiro/SSC/ProjectPoses/app/src/main/AndroidManifest.xml:26:9-44
+39-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:26:9-44
 40        android:label="@string/app_name"
-40-->/Users/nunocaseiro/SSC/ProjectPoses/app/src/main/AndroidManifest.xml:27:9-41
+40-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:27:9-41
 41        android:testOnly="true"
 42        android:theme="@style/Theme.AppCompat" >
-42-->/Users/nunocaseiro/SSC/ProjectPoses/app/src/main/AndroidManifest.xml:28:9-47
+42-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:28:9-47
 43        <meta-data
-43-->/Users/nunocaseiro/SSC/ProjectPoses/app/src/main/AndroidManifest.xml:30:9-32:68
+43-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:30:9-32:68
 44            android:name="com.google.android.gms.version"
-44-->/Users/nunocaseiro/SSC/ProjectPoses/app/src/main/AndroidManifest.xml:31:13-58
+44-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:31:13-58
 45            android:value="@integer/google_play_services_version" />
-45-->/Users/nunocaseiro/SSC/ProjectPoses/app/src/main/AndroidManifest.xml:32:13-66
+45-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:32:13-66
 46
 47        <!--
 48          Optional: Add it to automatically download ML model to device after
 49          your app is installed.
 50        -->
 51        <meta-data
-51-->/Users/nunocaseiro/SSC/ProjectPoses/app/src/main/AndroidManifest.xml:36:9-38:51
+51-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:36:9-38:51
 52            android:name="com.google.mlkit.vision.DEPENDENCIES"
-52-->/Users/nunocaseiro/SSC/ProjectPoses/app/src/main/AndroidManifest.xml:37:13-64
+52-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:37:13-64
 53            android:value="barcode,face,ocr,ica" />
-53-->/Users/nunocaseiro/SSC/ProjectPoses/app/src/main/AndroidManifest.xml:38:13-49
+53-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:38:13-49
 54
 55        <activity
-55-->/Users/nunocaseiro/SSC/ProjectPoses/app/src/main/AndroidManifest.xml:40:8-48:20
+55-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:40:8-48:20
 56            android:name="pt.ipleiria.estg.meicm.ssc.poses.java.ChooserActivity"
-56-->/Users/nunocaseiro/SSC/ProjectPoses/app/src/main/AndroidManifest.xml:41:13-49
+56-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:41:13-49
 57            android:exported="true"
-57-->/Users/nunocaseiro/SSC/ProjectPoses/app/src/main/AndroidManifest.xml:42:13-36
+57-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:42:13-36
 58            android:theme="@style/AppTheme" >
-58-->/Users/nunocaseiro/SSC/ProjectPoses/app/src/main/AndroidManifest.xml:43:13-44
+58-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:43:13-44
 59            <intent-filter>
-59-->/Users/nunocaseiro/SSC/ProjectPoses/app/src/main/AndroidManifest.xml:44:9-47:25
+59-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:44:9-47:25
 60                <action android:name="android.intent.action.MAIN" />
-60-->/Users/nunocaseiro/SSC/ProjectPoses/app/src/main/AndroidManifest.xml:45:13-64
-60-->/Users/nunocaseiro/SSC/ProjectPoses/app/src/main/AndroidManifest.xml:45:21-62
+60-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:45:13-64
+60-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:45:21-62
 61
 62                <category android:name="android.intent.category.LAUNCHER" />
-62-->/Users/nunocaseiro/SSC/ProjectPoses/app/src/main/AndroidManifest.xml:46:13-72
-62-->/Users/nunocaseiro/SSC/ProjectPoses/app/src/main/AndroidManifest.xml:46:23-70
+62-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:46:13-72
+62-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:46:23-70
 63            </intent-filter>
 64>
 65        </activity>
 66        <activity
-66-->/Users/nunocaseiro/SSC/ProjectPoses/app/src/main/AndroidManifest.xml:50:9-54:20
+66-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:50:9-54:20
 67            android:name="pt.ipleiria.estg.meicm.ssc.poses.java.LivePreviewActivity"
-67-->/Users/nunocaseiro/SSC/ProjectPoses/app/src/main/AndroidManifest.xml:51:13-53
+67-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:51:13-53
 68            android:exported="true"
-68-->/Users/nunocaseiro/SSC/ProjectPoses/app/src/main/AndroidManifest.xml:52:13-36
+68-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:52:13-36
 69            android:theme="@style/AppTheme" >
-69-->/Users/nunocaseiro/SSC/ProjectPoses/app/src/main/AndroidManifest.xml:53:13-44
+69-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:53:13-44
 70        </activity>
 71        <activity
-71-->/Users/nunocaseiro/SSC/ProjectPoses/app/src/main/AndroidManifest.xml:56:9-60:20
+71-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:56:9-60:20
 72            android:name="pt.ipleiria.estg.meicm.ssc.poses.java.CameraXLivePreviewActivity"
-72-->/Users/nunocaseiro/SSC/ProjectPoses/app/src/main/AndroidManifest.xml:57:13-60
+72-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:57:13-60
 73            android:exported="true"
-73-->/Users/nunocaseiro/SSC/ProjectPoses/app/src/main/AndroidManifest.xml:58:13-36
+73-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:58:13-36
 74            android:theme="@style/AppTheme" >
-74-->/Users/nunocaseiro/SSC/ProjectPoses/app/src/main/AndroidManifest.xml:59:13-44
+74-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:59:13-44
 75        </activity>
 76        <activity
-76-->/Users/nunocaseiro/SSC/ProjectPoses/app/src/main/AndroidManifest.xml:62:9-64:39
+76-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:62:9-64:39
 77            android:name="pt.ipleiria.estg.meicm.ssc.poses.preference.SettingsActivity"
-77-->/Users/nunocaseiro/SSC/ProjectPoses/app/src/main/AndroidManifest.xml:63:13-56
+77-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:63:13-56
 78            android:exported="false" />
-78-->/Users/nunocaseiro/SSC/ProjectPoses/app/src/main/AndroidManifest.xml:64:13-37
+78-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:64:13-37
 79
 80        <service
 80-->[com.google.mlkit:object-detection:16.2.5] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/e42d3984261e21e9d0f4c5c47ef4b819/jetified-object-detection-16.2.5/AndroidManifest.xml:8:9-14:19

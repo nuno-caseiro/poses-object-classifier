@@ -1092,7 +1092,6 @@ id search_plate
 id search_src_text
 id search_voice_btn
 id select_dialog_listview
-id select_images_from_local
 id settings_button
 id settings_container
 id shortcut
@@ -1128,7 +1127,6 @@ id tag_screen_reader_focusable
 id tag_transition_group
 id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
-id take_photo_using_camera
 id test_activity_list_view
 id text
 id text2
@@ -1214,7 +1212,6 @@ layout settings_style
 layout spinner_style
 layout support_simple_spinner_dropdown_item
 layout toggle_style
-menu camera_button_menu
 mipmap ic_launcher
 string abc_action_bar_home_description
 string abc_action_bar_up_description

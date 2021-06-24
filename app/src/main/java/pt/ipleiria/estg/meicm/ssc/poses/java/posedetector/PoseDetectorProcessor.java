@@ -92,6 +92,7 @@ public class PoseDetectorProcessor
                   poseClassifierProcessor = new PoseClassifierProcessor(context, isStreamMode);
                 }
                 classificationResult = poseClassifierProcessor.getPoseResult(pose);
+
               }
               return new PoseWithClassification(pose, classificationResult);
             });
@@ -109,6 +110,10 @@ public class PoseDetectorProcessor
             visualizeZ,
             rescaleZForVisualization,
             poseWithClassification.classificationResult));
+    if (poseWithClassification.classificationResult.size() > 1){
+
+    Log.e("RESULTADO DA POSE", poseWithClassification.classificationResult.get(1));
+    }
   }
 
   @Override
