@@ -1,0 +1,15 @@
+
+y
+java:S1450L"\Remove the "maxDetectorMs" field and declare it as a local variable in the relevant methods.(€Õ´Æ8§Ù›Ş£/
+v
+java:S1450I"YRemove the "maxFrameMs" field and declare it as a local variable in the relevant methods.(‚÷¯”8§Ù›Ş£/
+y
+java:S1450M"\Remove the "minDetectorMs" field and declare it as a local variable in the relevant methods.(ü¬¾8§Ù›Ş£/
+{
+java:S1450J"YRemove the "minFrameMs" field and declare it as a local variable in the relevant methods.(­šî÷ıÿÿÿÿ8§Ù›Ş£/
+s
+java:S1450G"VRemove the "numRuns" field and declare it as a local variable in the relevant methods.(¼ıØ€8¨Ù›Ş£/
+z
+java:S1450K"^Remove the "totalDetectorMs" field and declare it as a local variable in the relevant methods.(‚â»8¨Ù›Ş£/
+}
+java:S1450H"[Remove the "totalFrameMs" field and declare it as a local variable in the relevant methods.(†™î’ûÿÿÿÿ8¨Ù›Ş£/
