@@ -34,242 +34,160 @@
 23    <uses-permission android:name="android.permission.CAMERA" />
 23-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:22:5-64
 23-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:22:22-62
-24
-25    <queries>
-25-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:67:5-71:15
-26        <intent>
-26-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:68:9-70:18
-27            <action android:name="android.media.action.IMAGE_CAPTURE" />
-27-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:69:13-73
-27-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:69:21-70
-28        </intent>
-29    </queries>
-30
-31    <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
-32    <!-- <uses-sdk android:minSdkVersion="14"/> -->
-33    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-33-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/b0b07d668fb05669fea93be346cdaca2/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:25:5-79
-33-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/b0b07d668fb05669fea93be346cdaca2/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:25:22-76
-34
-35    <application
-35-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:24:5-66:19
-36        android:name="androidx.multidex.MultiDexApplication"
-36-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:25:9-61
-37        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-37-->[androidx.core:core:1.3.1] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/9ce39da31d83914ee9b08fa3e90e05b5/core-1.3.1/AndroidManifest.xml:24:18-86
-38        android:debuggable="true"
-39        android:icon="@drawable/logo_mlkit"
-39-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:26:9-44
-40        android:label="@string/app_name"
-40-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:27:9-41
-41        android:testOnly="true"
-42        android:theme="@style/Theme.AppCompat" >
-42-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:28:9-47
+24    <uses-permission android:name="android.permission.WAKE_LOCK" />
+24-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:23:5-68
+24-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:23:22-65
+25    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+25-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:24:5-79
+25-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:24:22-76
+26
+27    <queries>
+27-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:60:5-64:15
+28        <intent>
+28-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:61:9-63:18
+29            <action android:name="android.media.action.IMAGE_CAPTURE" />
+29-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:62:13-73
+29-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:62:21-70
+30        </intent>
+31    </queries>
+32
+33    <application
+33-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:28:5-59:19
+34        android:name="androidx.multidex.MultiDexApplication"
+34-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:29:9-61
+35        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+35-->[androidx.core:core:1.3.1] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/9ce39da31d83914ee9b08fa3e90e05b5/core-1.3.1/AndroidManifest.xml:24:18-86
+36        android:debuggable="true"
+37        android:icon="@drawable/logo_mlkit"
+37-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:30:9-44
+38        android:label="@string/app_name"
+38-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:31:9-41
+39        android:testOnly="true"
+40        android:theme="@style/Theme.AppCompat" >
+40-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:32:9-47
+41        <service android:name="org.eclipse.paho.android.service.MqttService" />
+41-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:33:9-80
+41-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:33:18-77
+42
 43        <meta-data
-43-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:30:9-32:68
+43-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:34:9-36:68
 44            android:name="com.google.android.gms.version"
-44-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:31:13-58
+44-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:35:13-58
 45            android:value="@integer/google_play_services_version" />
-45-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:32:13-66
+45-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:36:13-66
 46
-47        <!--
-48          Optional: Add it to automatically download ML model to device after
-49          your app is installed.
-50        -->
-51        <meta-data
-51-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:36:9-38:51
-52            android:name="com.google.mlkit.vision.DEPENDENCIES"
-52-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:37:13-64
-53            android:value="barcode,face,ocr,ica" />
-53-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:38:13-49
-54
-55        <activity
-55-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:40:8-48:20
-56            android:name="pt.ipleiria.estg.meicm.ssc.poses.java.ChooserActivity"
-56-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:41:13-49
-57            android:exported="true"
-57-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:42:13-36
-58            android:theme="@style/AppTheme" >
-58-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:43:13-44
-59            <intent-filter>
-59-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:44:9-47:25
-60                <action android:name="android.intent.action.MAIN" />
-60-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:45:13-64
-60-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:45:21-62
-61
-62                <category android:name="android.intent.category.LAUNCHER" />
-62-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:46:13-72
-62-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:46:23-70
-63            </intent-filter>
-64>
-65        </activity>
-66        <activity
-66-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:50:9-54:20
-67            android:name="pt.ipleiria.estg.meicm.ssc.poses.java.LivePreviewActivity"
-67-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:51:13-53
-68            android:exported="true"
-68-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:52:13-36
-69            android:theme="@style/AppTheme" >
-69-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:53:13-44
-70        </activity>
-71        <activity
-71-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:56:9-60:20
-72            android:name="pt.ipleiria.estg.meicm.ssc.poses.java.CameraXLivePreviewActivity"
-72-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:57:13-60
-73            android:exported="true"
-73-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:58:13-36
-74            android:theme="@style/AppTheme" >
-74-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:59:13-44
-75        </activity>
-76        <activity
-76-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:62:9-64:39
-77            android:name="pt.ipleiria.estg.meicm.ssc.poses.preference.SettingsActivity"
-77-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:63:13-56
-78            android:exported="false" />
-78-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:64:13-37
-79
-80        <service
-80-->[com.google.mlkit:object-detection:16.2.5] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/e42d3984261e21e9d0f4c5c47ef4b819/jetified-object-detection-16.2.5/AndroidManifest.xml:8:9-14:19
-81            android:name="com.google.mlkit.common.internal.MlKitComponentDiscoveryService"
-81-->[com.google.mlkit:object-detection:16.2.5] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/e42d3984261e21e9d0f4c5c47ef4b819/jetified-object-detection-16.2.5/AndroidManifest.xml:9:13-91
-82            android:directBootAware="true"
-82-->[com.google.mlkit:common:17.2.0] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/7a5561941ceac3031de383afdc0597e6/jetified-common-17.2.0/AndroidManifest.xml:17:13-43
-83            android:exported="false" >
-83-->[com.google.mlkit:object-detection:16.2.5] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/e42d3984261e21e9d0f4c5c47ef4b819/jetified-object-detection-16.2.5/AndroidManifest.xml:10:13-37
-84            <meta-data
-84-->[com.google.mlkit:object-detection:16.2.5] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/e42d3984261e21e9d0f4c5c47ef4b819/jetified-object-detection-16.2.5/AndroidManifest.xml:11:13-13:85
-85                android:name="com.google.firebase.components:com.google.mlkit.vision.objects.defaults.internal.DefaultObjectsRegistrar"
-85-->[com.google.mlkit:object-detection:16.2.5] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/e42d3984261e21e9d0f4c5c47ef4b819/jetified-object-detection-16.2.5/AndroidManifest.xml:12:17-136
-86                android:value="com.google.firebase.components.ComponentRegistrar" />
-86-->[com.google.mlkit:object-detection:16.2.5] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/e42d3984261e21e9d0f4c5c47ef4b819/jetified-object-detection-16.2.5/AndroidManifest.xml:13:17-82
-87            <meta-data
-87-->[com.google.mlkit:object-detection-custom:16.3.2] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/40dc035c4fba38328258b1d3d5a05ff9/jetified-object-detection-custom-16.3.2/AndroidManifest.xml:11:13-13:85
-88                android:name="com.google.firebase.components:com.google.mlkit.vision.objects.custom.internal.CustomObjectsRegistrar"
-88-->[com.google.mlkit:object-detection-custom:16.3.2] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/40dc035c4fba38328258b1d3d5a05ff9/jetified-object-detection-custom-16.3.2/AndroidManifest.xml:12:17-133
-89                android:value="com.google.firebase.components.ComponentRegistrar" />
-89-->[com.google.mlkit:object-detection-custom:16.3.2] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/40dc035c4fba38328258b1d3d5a05ff9/jetified-object-detection-custom-16.3.2/AndroidManifest.xml:13:17-82
-90            <meta-data
-90-->[com.google.android.gms:play-services-mlkit-text-recognition:16.2.0] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/fbd84084a57fbdcb5b65ca726298e614/jetified-play-services-mlkit-text-recognition-16.2.0/AndroidManifest.xml:12:13-14:85
-91                android:name="com.google.firebase.components:com.google.mlkit.vision.text.internal.TextRegistrar"
-91-->[com.google.android.gms:play-services-mlkit-text-recognition:16.2.0] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/fbd84084a57fbdcb5b65ca726298e614/jetified-play-services-mlkit-text-recognition-16.2.0/AndroidManifest.xml:13:17-114
-92                android:value="com.google.firebase.components.ComponentRegistrar" />
-92-->[com.google.android.gms:play-services-mlkit-text-recognition:16.2.0] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/fbd84084a57fbdcb5b65ca726298e614/jetified-play-services-mlkit-text-recognition-16.2.0/AndroidManifest.xml:14:17-82
-93            <meta-data
-93-->[com.google.mlkit:image-labeling:17.0.4] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/11d3f4e039587d60427df57aaf42cf49/jetified-image-labeling-17.0.4/AndroidManifest.xml:11:13-13:85
-94                android:name="com.google.firebase.components:com.google.mlkit.vision.label.defaults.internal.BundledLabelRegistrar"
-94-->[com.google.mlkit:image-labeling:17.0.4] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/11d3f4e039587d60427df57aaf42cf49/jetified-image-labeling-17.0.4/AndroidManifest.xml:12:17-132
-95                android:value="com.google.firebase.components.ComponentRegistrar" />
-95-->[com.google.mlkit:image-labeling:17.0.4] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/11d3f4e039587d60427df57aaf42cf49/jetified-image-labeling-17.0.4/AndroidManifest.xml:13:17-82
-96            <meta-data
-96-->[com.google.mlkit:image-labeling-custom:16.3.1] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/2844c5ed8848eea63649d4b29e249237/jetified-image-labeling-custom-16.3.1/AndroidManifest.xml:11:13-13:85
-97                android:name="com.google.firebase.components:com.google.mlkit.vision.label.custom.internal.CustomLabelRegistrar"
-97-->[com.google.mlkit:image-labeling-custom:16.3.1] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/2844c5ed8848eea63649d4b29e249237/jetified-image-labeling-custom-16.3.1/AndroidManifest.xml:12:17-129
-98                android:value="com.google.firebase.components.ComponentRegistrar" />
-98-->[com.google.mlkit:image-labeling-custom:16.3.1] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/2844c5ed8848eea63649d4b29e249237/jetified-image-labeling-custom-16.3.1/AndroidManifest.xml:13:17-82
-99            <meta-data
-99-->[com.google.mlkit:segmentation-selfie:16.0.0-beta1] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/efe1518c8ad7dd5cf9109580e9c0af4f/jetified-segmentation-selfie-16.0.0-beta1/AndroidManifest.xml:12:13-14:85
-100                android:name="com.google.firebase.components:com.google.mlkit.vision.segmentation.internal.SegmentationRegistrar"
-100-->[com.google.mlkit:segmentation-selfie:16.0.0-beta1] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/efe1518c8ad7dd5cf9109580e9c0af4f/jetified-segmentation-selfie-16.0.0-beta1/AndroidManifest.xml:13:17-130
-101                android:value="com.google.firebase.components.ComponentRegistrar" />
-101-->[com.google.mlkit:segmentation-selfie:16.0.0-beta1] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/efe1518c8ad7dd5cf9109580e9c0af4f/jetified-segmentation-selfie-16.0.0-beta1/AndroidManifest.xml:14:17-82
-102            <meta-data
-102-->[com.google.android.gms:play-services-mlkit-barcode-scanning:16.1.5] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/a0b7d910755f0d50f320b67ad9c8b42d/jetified-play-services-mlkit-barcode-scanning-16.1.5/AndroidManifest.xml:12:13-14:85
-103                android:name="com.google.firebase.components:com.google.mlkit.vision.barcode.internal.BarcodeRegistrar"
-103-->[com.google.android.gms:play-services-mlkit-barcode-scanning:16.1.5] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/a0b7d910755f0d50f320b67ad9c8b42d/jetified-play-services-mlkit-barcode-scanning-16.1.5/AndroidManifest.xml:13:17-120
-104                android:value="com.google.firebase.components.ComponentRegistrar" />
-104-->[com.google.android.gms:play-services-mlkit-barcode-scanning:16.1.5] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/a0b7d910755f0d50f320b67ad9c8b42d/jetified-play-services-mlkit-barcode-scanning-16.1.5/AndroidManifest.xml:14:17-82
-105            <meta-data
-105-->[com.google.mlkit:vision-internal-vkp:18.1.0] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/74d754094cc516ee22f72decad25b792/jetified-vision-internal-vkp-18.1.0/AndroidManifest.xml:11:13-13:85
-106                android:name="com.google.firebase.components:com.google.mlkit.vision.vkp.VkpRegistrar"
-106-->[com.google.mlkit:vision-internal-vkp:18.1.0] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/74d754094cc516ee22f72decad25b792/jetified-vision-internal-vkp-18.1.0/AndroidManifest.xml:12:17-103
-107                android:value="com.google.firebase.components.ComponentRegistrar" />
-107-->[com.google.mlkit:vision-internal-vkp:18.1.0] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/74d754094cc516ee22f72decad25b792/jetified-vision-internal-vkp-18.1.0/AndroidManifest.xml:13:17-82
-108            <meta-data
-108-->[com.google.android.gms:play-services-mlkit-face-detection:16.1.7] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/e6cfe559b92bdd471fe60009f56c7c46/jetified-play-services-mlkit-face-detection-16.1.7/AndroidManifest.xml:12:13-14:85
-109                android:name="com.google.firebase.components:com.google.mlkit.vision.face.internal.FaceRegistrar"
-109-->[com.google.android.gms:play-services-mlkit-face-detection:16.1.7] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/e6cfe559b92bdd471fe60009f56c7c46/jetified-play-services-mlkit-face-detection-16.1.7/AndroidManifest.xml:13:17-114
-110                android:value="com.google.firebase.components.ComponentRegistrar" />
-110-->[com.google.android.gms:play-services-mlkit-face-detection:16.1.7] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/e6cfe559b92bdd471fe60009f56c7c46/jetified-play-services-mlkit-face-detection-16.1.7/AndroidManifest.xml:14:17-82
-111            <meta-data
-111-->[com.google.mlkit:pose-detection-common:17.1.0-beta2] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/6a53e408425835184631b09e4d84de4c/jetified-pose-detection-common-17.1.0-beta2/AndroidManifest.xml:11:13-13:85
-112                android:name="com.google.firebase.components:com.google.mlkit.vision.pose.internal.PoseRegistrar"
-112-->[com.google.mlkit:pose-detection-common:17.1.0-beta2] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/6a53e408425835184631b09e4d84de4c/jetified-pose-detection-common-17.1.0-beta2/AndroidManifest.xml:12:17-114
-113                android:value="com.google.firebase.components.ComponentRegistrar" />
-113-->[com.google.mlkit:pose-detection-common:17.1.0-beta2] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/6a53e408425835184631b09e4d84de4c/jetified-pose-detection-common-17.1.0-beta2/AndroidManifest.xml:13:17-82
-114            <meta-data
-114-->[com.google.mlkit:vision-common:16.4.0] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/a1641b39659a2027f66cce07bef20e94/jetified-vision-common-16.4.0/AndroidManifest.xml:12:13-14:85
-115                android:name="com.google.firebase.components:com.google.mlkit.vision.common.internal.VisionCommonRegistrar"
-115-->[com.google.mlkit:vision-common:16.4.0] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/a1641b39659a2027f66cce07bef20e94/jetified-vision-common-16.4.0/AndroidManifest.xml:13:17-124
-116                android:value="com.google.firebase.components.ComponentRegistrar" />
-116-->[com.google.mlkit:vision-common:16.4.0] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/a1641b39659a2027f66cce07bef20e94/jetified-vision-common-16.4.0/AndroidManifest.xml:14:17-82
-117            <meta-data
-117-->[com.google.mlkit:common:17.2.0] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/7a5561941ceac3031de383afdc0597e6/jetified-common-17.2.0/AndroidManifest.xml:20:13-22:85
-118                android:name="com.google.firebase.components:com.google.mlkit.common.internal.CommonComponentRegistrar"
-118-->[com.google.mlkit:common:17.2.0] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/7a5561941ceac3031de383afdc0597e6/jetified-common-17.2.0/AndroidManifest.xml:21:17-120
-119                android:value="com.google.firebase.components.ComponentRegistrar" />
-119-->[com.google.mlkit:common:17.2.0] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/7a5561941ceac3031de383afdc0597e6/jetified-common-17.2.0/AndroidManifest.xml:22:17-82
-120        </service>
-121
-122        <provider
-122-->[com.google.mlkit:common:17.2.0] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/7a5561941ceac3031de383afdc0597e6/jetified-common-17.2.0/AndroidManifest.xml:9:9-13:38
-123            android:name="com.google.mlkit.common.internal.MlKitInitProvider"
-123-->[com.google.mlkit:common:17.2.0] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/7a5561941ceac3031de383afdc0597e6/jetified-common-17.2.0/AndroidManifest.xml:10:13-78
-124            android:authorities="pt.ipleiria.estg.meicm.ssc.poses.mlkitinitprovider"
-124-->[com.google.mlkit:common:17.2.0] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/7a5561941ceac3031de383afdc0597e6/jetified-common-17.2.0/AndroidManifest.xml:11:13-69
-125            android:exported="false"
-125-->[com.google.mlkit:common:17.2.0] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/7a5561941ceac3031de383afdc0597e6/jetified-common-17.2.0/AndroidManifest.xml:12:13-37
-126            android:initOrder="99" />
-126-->[com.google.mlkit:common:17.2.0] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/7a5561941ceac3031de383afdc0597e6/jetified-common-17.2.0/AndroidManifest.xml:13:13-35
-127
-128        <activity
-128-->[com.google.android.gms:play-services-base:17.6.0] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/eb3695de7646208bc64e4426ddd573a3/jetified-play-services-base-17.6.0/AndroidManifest.xml:23:9-26:75
-129            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-129-->[com.google.android.gms:play-services-base:17.6.0] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/eb3695de7646208bc64e4426ddd573a3/jetified-play-services-base-17.6.0/AndroidManifest.xml:24:13-79
-130            android:exported="false"
-130-->[com.google.android.gms:play-services-base:17.6.0] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/eb3695de7646208bc64e4426ddd573a3/jetified-play-services-base-17.6.0/AndroidManifest.xml:25:13-37
-131            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-131-->[com.google.android.gms:play-services-base:17.6.0] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/eb3695de7646208bc64e4426ddd573a3/jetified-play-services-base-17.6.0/AndroidManifest.xml:26:13-72
-132
-133        <service
-133-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/b0b07d668fb05669fea93be346cdaca2/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:29:9-35:19
-134            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
-134-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/b0b07d668fb05669fea93be346cdaca2/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:30:13-103
-135            android:exported="false" >
-135-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/b0b07d668fb05669fea93be346cdaca2/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:31:13-37
-136            <meta-data
-136-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/b0b07d668fb05669fea93be346cdaca2/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:32:13-34:39
-137                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
-137-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/b0b07d668fb05669fea93be346cdaca2/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:33:17-94
-138                android:value="cct" />
-138-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/b0b07d668fb05669fea93be346cdaca2/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:34:17-36
-139        </service>
-140        <service
-140-->[com.google.android.datatransport:transport-runtime:2.2.6] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/0b67044ceabbcacea62e90fd6e1fc6a0/jetified-transport-runtime-2.2.6/AndroidManifest.xml:26:9-30:19
-141            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
-141-->[com.google.android.datatransport:transport-runtime:2.2.6] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/0b67044ceabbcacea62e90fd6e1fc6a0/jetified-transport-runtime-2.2.6/AndroidManifest.xml:27:13-117
-142            android:exported="false"
-142-->[com.google.android.datatransport:transport-runtime:2.2.6] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/0b67044ceabbcacea62e90fd6e1fc6a0/jetified-transport-runtime-2.2.6/AndroidManifest.xml:28:13-37
-143            android:permission="android.permission.BIND_JOB_SERVICE" >
-143-->[com.google.android.datatransport:transport-runtime:2.2.6] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/0b67044ceabbcacea62e90fd6e1fc6a0/jetified-transport-runtime-2.2.6/AndroidManifest.xml:29:13-69
-144        </service>
-145
-146        <receiver
-146-->[com.google.android.datatransport:transport-runtime:2.2.6] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/0b67044ceabbcacea62e90fd6e1fc6a0/jetified-transport-runtime-2.2.6/AndroidManifest.xml:32:9-34:40
-147            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
-147-->[com.google.android.datatransport:transport-runtime:2.2.6] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/0b67044ceabbcacea62e90fd6e1fc6a0/jetified-transport-runtime-2.2.6/AndroidManifest.xml:33:13-132
-148            android:exported="false" />
-148-->[com.google.android.datatransport:transport-runtime:2.2.6] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/0b67044ceabbcacea62e90fd6e1fc6a0/jetified-transport-runtime-2.2.6/AndroidManifest.xml:34:13-37
-149
-150        <provider
-150-->[androidx.lifecycle:lifecycle-process:2.1.0] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/32dbcabb8180e7916e19d9fa52e819c7/jetified-lifecycle-process-2.1.0/AndroidManifest.xml:23:9-27:43
-151            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
-151-->[androidx.lifecycle:lifecycle-process:2.1.0] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/32dbcabb8180e7916e19d9fa52e819c7/jetified-lifecycle-process-2.1.0/AndroidManifest.xml:24:13-79
-152            android:authorities="pt.ipleiria.estg.meicm.ssc.poses.lifecycle-process"
-152-->[androidx.lifecycle:lifecycle-process:2.1.0] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/32dbcabb8180e7916e19d9fa52e819c7/jetified-lifecycle-process-2.1.0/AndroidManifest.xml:25:13-69
-153            android:exported="false"
-153-->[androidx.lifecycle:lifecycle-process:2.1.0] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/32dbcabb8180e7916e19d9fa52e819c7/jetified-lifecycle-process-2.1.0/AndroidManifest.xml:26:13-37
-154            android:multiprocess="true" />
-154-->[androidx.lifecycle:lifecycle-process:2.1.0] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/32dbcabb8180e7916e19d9fa52e819c7/jetified-lifecycle-process-2.1.0/AndroidManifest.xml:27:13-40
-155    </application>
-156
-157</manifest>
+47        <activity
+47-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:38:6-43:20
+48            android:name="pt.ipleiria.estg.meicm.ssc.poses.java.LivePreviewActivity"
+48-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:39:13-53
+49            android:exported="true"
+49-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:40:13-36
+50            android:theme="@style/AppTheme" >
+50-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:41:13-44
+51        </activity>
+52        <activity
+52-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:45:9-53:20
+53            android:name="pt.ipleiria.estg.meicm.ssc.poses.java.CameraXLivePreviewActivity"
+53-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:46:13-60
+54            android:exported="true"
+54-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:47:13-36
+55            android:theme="@style/AppTheme" >
+55-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:48:13-44
+56            <intent-filter>
+56-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:48:45-51:25
+57                <action android:name="android.intent.action.MAIN" />
+57-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:49:13-64
+57-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:49:21-62
+58
+59                <category android:name="android.intent.category.LAUNCHER" />
+59-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:50:13-72
+59-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:50:23-70
+60            </intent-filter>
+61        </activity>
+62        <activity
+62-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:55:9-57:39
+63            android:name="pt.ipleiria.estg.meicm.ssc.poses.preference.SettingsActivity"
+63-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:56:13-56
+64            android:exported="false" />
+64-->/Users/nunocaseiro/SSC/Projeto/Poses/app/src/main/AndroidManifest.xml:57:13-37
+65
+66        <service
+66-->[com.google.mlkit:pose-detection-common:17.1.0-beta2] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/6a53e408425835184631b09e4d84de4c/jetified-pose-detection-common-17.1.0-beta2/AndroidManifest.xml:8:9-14:19
+67            android:name="com.google.mlkit.common.internal.MlKitComponentDiscoveryService"
+67-->[com.google.mlkit:pose-detection-common:17.1.0-beta2] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/6a53e408425835184631b09e4d84de4c/jetified-pose-detection-common-17.1.0-beta2/AndroidManifest.xml:9:13-91
+68            android:directBootAware="true"
+68-->[com.google.mlkit:common:17.1.1] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/75fa12031c38034388f3ac9946f2d038/jetified-common-17.1.1/AndroidManifest.xml:17:13-43
+69            android:exported="false" >
+69-->[com.google.mlkit:pose-detection-common:17.1.0-beta2] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/6a53e408425835184631b09e4d84de4c/jetified-pose-detection-common-17.1.0-beta2/AndroidManifest.xml:10:13-37
+70            <meta-data
+70-->[com.google.mlkit:pose-detection-common:17.1.0-beta2] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/6a53e408425835184631b09e4d84de4c/jetified-pose-detection-common-17.1.0-beta2/AndroidManifest.xml:11:13-13:85
+71                android:name="com.google.firebase.components:com.google.mlkit.vision.pose.internal.PoseRegistrar"
+71-->[com.google.mlkit:pose-detection-common:17.1.0-beta2] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/6a53e408425835184631b09e4d84de4c/jetified-pose-detection-common-17.1.0-beta2/AndroidManifest.xml:12:17-114
+72                android:value="com.google.firebase.components.ComponentRegistrar" />
+72-->[com.google.mlkit:pose-detection-common:17.1.0-beta2] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/6a53e408425835184631b09e4d84de4c/jetified-pose-detection-common-17.1.0-beta2/AndroidManifest.xml:13:17-82
+73            <meta-data
+73-->[com.google.mlkit:vision-common:16.3.0] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/9468ca1b65e8653483f0fd7fd3723c8d/jetified-vision-common-16.3.0/AndroidManifest.xml:12:13-14:85
+74                android:name="com.google.firebase.components:com.google.mlkit.vision.common.internal.VisionCommonRegistrar"
+74-->[com.google.mlkit:vision-common:16.3.0] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/9468ca1b65e8653483f0fd7fd3723c8d/jetified-vision-common-16.3.0/AndroidManifest.xml:13:17-124
+75                android:value="com.google.firebase.components.ComponentRegistrar" />
+75-->[com.google.mlkit:vision-common:16.3.0] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/9468ca1b65e8653483f0fd7fd3723c8d/jetified-vision-common-16.3.0/AndroidManifest.xml:14:17-82
+76            <meta-data
+76-->[com.google.mlkit:common:17.1.1] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/75fa12031c38034388f3ac9946f2d038/jetified-common-17.1.1/AndroidManifest.xml:20:13-22:85
+77                android:name="com.google.firebase.components:com.google.mlkit.common.internal.CommonComponentRegistrar"
+77-->[com.google.mlkit:common:17.1.1] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/75fa12031c38034388f3ac9946f2d038/jetified-common-17.1.1/AndroidManifest.xml:21:17-120
+78                android:value="com.google.firebase.components.ComponentRegistrar" />
+78-->[com.google.mlkit:common:17.1.1] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/75fa12031c38034388f3ac9946f2d038/jetified-common-17.1.1/AndroidManifest.xml:22:17-82
+79        </service>
+80
+81        <provider
+81-->[com.google.mlkit:common:17.1.1] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/75fa12031c38034388f3ac9946f2d038/jetified-common-17.1.1/AndroidManifest.xml:9:9-13:38
+82            android:name="com.google.mlkit.common.internal.MlKitInitProvider"
+82-->[com.google.mlkit:common:17.1.1] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/75fa12031c38034388f3ac9946f2d038/jetified-common-17.1.1/AndroidManifest.xml:10:13-78
+83            android:authorities="pt.ipleiria.estg.meicm.ssc.poses.mlkitinitprovider"
+83-->[com.google.mlkit:common:17.1.1] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/75fa12031c38034388f3ac9946f2d038/jetified-common-17.1.1/AndroidManifest.xml:11:13-69
+84            android:exported="false"
+84-->[com.google.mlkit:common:17.1.1] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/75fa12031c38034388f3ac9946f2d038/jetified-common-17.1.1/AndroidManifest.xml:12:13-37
+85            android:initOrder="99" />
+85-->[com.google.mlkit:common:17.1.1] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/75fa12031c38034388f3ac9946f2d038/jetified-common-17.1.1/AndroidManifest.xml:13:13-35
+86
+87        <activity
+87-->[com.google.android.gms:play-services-base:17.4.0] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/81d281dcd3de34e2cdf3756ab2b847d7/jetified-play-services-base-17.4.0/AndroidManifest.xml:23:9-26:75
+88            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+88-->[com.google.android.gms:play-services-base:17.4.0] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/81d281dcd3de34e2cdf3756ab2b847d7/jetified-play-services-base-17.4.0/AndroidManifest.xml:24:13-79
+89            android:exported="false"
+89-->[com.google.android.gms:play-services-base:17.4.0] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/81d281dcd3de34e2cdf3756ab2b847d7/jetified-play-services-base-17.4.0/AndroidManifest.xml:25:13-37
+90            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+90-->[com.google.android.gms:play-services-base:17.4.0] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/81d281dcd3de34e2cdf3756ab2b847d7/jetified-play-services-base-17.4.0/AndroidManifest.xml:26:13-72
+91
+92        <service
+92-->[com.google.android.datatransport:transport-backend-cct:2.3.2] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/7e0984d9e07ed9f648c47bf7aa297bb4/jetified-transport-backend-cct-2.3.2/AndroidManifest.xml:29:9-35:19
+93            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+93-->[com.google.android.datatransport:transport-backend-cct:2.3.2] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/7e0984d9e07ed9f648c47bf7aa297bb4/jetified-transport-backend-cct-2.3.2/AndroidManifest.xml:30:13-103
+94            android:exported="false" >
+94-->[com.google.android.datatransport:transport-backend-cct:2.3.2] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/7e0984d9e07ed9f648c47bf7aa297bb4/jetified-transport-backend-cct-2.3.2/AndroidManifest.xml:31:13-37
+95            <meta-data
+95-->[com.google.android.datatransport:transport-backend-cct:2.3.2] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/7e0984d9e07ed9f648c47bf7aa297bb4/jetified-transport-backend-cct-2.3.2/AndroidManifest.xml:32:13-34:39
+96                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+96-->[com.google.android.datatransport:transport-backend-cct:2.3.2] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/7e0984d9e07ed9f648c47bf7aa297bb4/jetified-transport-backend-cct-2.3.2/AndroidManifest.xml:33:17-94
+97                android:value="cct" />
+97-->[com.google.android.datatransport:transport-backend-cct:2.3.2] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/7e0984d9e07ed9f648c47bf7aa297bb4/jetified-transport-backend-cct-2.3.2/AndroidManifest.xml:34:17-36
+98        </service>
+99        <service
+99-->[com.google.android.datatransport:transport-runtime:2.2.5] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/a1e85a9300b9f33871941b06bbe477d4/jetified-transport-runtime-2.2.5/AndroidManifest.xml:26:9-30:19
+100            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+100-->[com.google.android.datatransport:transport-runtime:2.2.5] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/a1e85a9300b9f33871941b06bbe477d4/jetified-transport-runtime-2.2.5/AndroidManifest.xml:27:13-117
+101            android:exported="false"
+101-->[com.google.android.datatransport:transport-runtime:2.2.5] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/a1e85a9300b9f33871941b06bbe477d4/jetified-transport-runtime-2.2.5/AndroidManifest.xml:28:13-37
+102            android:permission="android.permission.BIND_JOB_SERVICE" >
+102-->[com.google.android.datatransport:transport-runtime:2.2.5] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/a1e85a9300b9f33871941b06bbe477d4/jetified-transport-runtime-2.2.5/AndroidManifest.xml:29:13-69
+103        </service>
+104
+105        <receiver
+105-->[com.google.android.datatransport:transport-runtime:2.2.5] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/a1e85a9300b9f33871941b06bbe477d4/jetified-transport-runtime-2.2.5/AndroidManifest.xml:32:9-34:40
+106            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+106-->[com.google.android.datatransport:transport-runtime:2.2.5] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/a1e85a9300b9f33871941b06bbe477d4/jetified-transport-runtime-2.2.5/AndroidManifest.xml:33:13-132
+107            android:exported="false" />
+107-->[com.google.android.datatransport:transport-runtime:2.2.5] /Users/nunocaseiro/.gradle/caches/transforms-2/files-2.1/a1e85a9300b9f33871941b06bbe477d4/jetified-transport-runtime-2.2.5/AndroidManifest.xml:34:13-37
+108    </application>
+109
+110</manifest>

@@ -1,0 +1,16 @@
+
+c	java:S112«"FDefine and throw a dedicated exception instead of using a generic one.(ª£äÒ8¿ò‚Œ¤/
+R
+java:S1128"0Remove this unused import 'java.io.IOException'.(ªº»Úıÿÿÿÿ8ÉéÂŒ¤/
+P
+java:S1135"2Complete the task associated to this TODO comment.(…ïœ†8¬èÄŒ¤/
+Š
+java:S1130«"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(ª£äÒ8Ôò‚Œ¤/
+X
+java:S1161®":Add the "@Override" annotation above this method signature(“–ış8Õò‚Œ¤/
+_
+java:S1854Ç"<Remove this useless assignment to local variable "response".(°Áøœûÿÿÿÿ8÷øÃŒ¤/
+Q
+java:S1874¿".Remove this use of "create"; it is deprecated.(Æ¸Úéùÿÿÿÿ8úøÃŒ¤/
+P
+java:S1481Ç"-Remove this unused "response" local variable.(°Áøœûÿÿÿÿ8„ùÃŒ¤/

@@ -1,15 +1,24 @@
+pt/ipleiria/estg/meicm/ssc/poses/JSSEProvider.java
+ pt.ipleiria.estg.meicm.ssc.poses.JSSEProvider
 pt/ipleiria/estg/meicm/ssc/poses/InferenceInfoGraphic.java
  pt.ipleiria.estg.meicm.ssc.poses.InferenceInfoGraphic
+pt/ipleiria/estg/meicm/ssc/poses/GMailSender.java
+ pt.ipleiria.estg.meicm.ssc.poses.GMailSender
+ pt.ipleiria.estg.meicm.ssc.poses.GMailSender$ByteArrayDataSource
 pt/ipleiria/estg/meicm/ssc/poses/java/VisionProcessorBase.java
  pt.ipleiria.estg.meicm.ssc.poses.java.VisionProcessorBase
  pt.ipleiria.estg.meicm.ssc.poses.java.VisionProcessorBase$1
 pt/ipleiria/estg/meicm/ssc/poses/GraphicOverlay.java
  pt.ipleiria.estg.meicm.ssc.poses.GraphicOverlay
  pt.ipleiria.estg.meicm.ssc.poses.GraphicOverlay$Graphic
-pt/ipleiria/estg/meicm/ssc/poses/preference/CameraXLivePreviewPreferenceFragment.java
- pt.ipleiria.estg.meicm.ssc.poses.preference.CameraXLivePreviewPreferenceFragment
+pt/ipleiria/estg/meicm/ssc/poses/java/posedetector/PoseDetectorProcessor.java
+ pt.ipleiria.estg.meicm.ssc.poses.java.posedetector.PoseDetectorProcessor
+ pt.ipleiria.estg.meicm.ssc.poses.java.posedetector.PoseDetectorProcessor$1
+ pt.ipleiria.estg.meicm.ssc.poses.java.posedetector.PoseDetectorProcessor$PoseWithClassification
 pt/ipleiria/estg/meicm/ssc/poses/java/posedetector/classification/PoseClassifier.java
  pt.ipleiria.estg.meicm.ssc.poses.java.posedetector.classification.PoseClassifier
+pt/ipleiria/estg/meicm/ssc/poses/AppData.java
+ pt.ipleiria.estg.meicm.ssc.poses.AppData
 pt/ipleiria/estg/meicm/ssc/poses/FrameMetadata.java
  pt.ipleiria.estg.meicm.ssc.poses.FrameMetadata
  pt.ipleiria.estg.meicm.ssc.poses.FrameMetadata$1
@@ -28,11 +37,10 @@ pt/ipleiria/estg/meicm/ssc/poses/java/posedetector/PoseGraphic.java
  pt.ipleiria.estg.meicm.ssc.poses.java.posedetector.PoseGraphic
 pt/ipleiria/estg/meicm/ssc/poses/BuildConfig.java
  pt.ipleiria.estg.meicm.ssc.poses.BuildConfig
-pt/ipleiria/estg/meicm/ssc/poses/CameraXViewModel.java
- pt.ipleiria.estg.meicm.ssc.poses.CameraXViewModel
-pt/ipleiria/estg/meicm/ssc/poses/java/ChooserActivity.java
- pt.ipleiria.estg.meicm.ssc.poses.java.ChooserActivity
- pt.ipleiria.estg.meicm.ssc.poses.java.ChooserActivity$MyArrayAdapter
+pt/ipleiria/estg/meicm/ssc/poses/java/CameraXLivePreviewActivity.java
+ pt.ipleiria.estg.meicm.ssc.poses.java.CameraXLivePreviewActivity
+ pt.ipleiria.estg.meicm.ssc.poses.java.CameraXLivePreviewActivity$1
+ pt.ipleiria.estg.meicm.ssc.poses.java.CameraXLivePreviewActivity$2
 pt/ipleiria/estg/meicm/ssc/poses/java/posedetector/classification/EMASmoothing.java
  pt.ipleiria.estg.meicm.ssc.poses.java.posedetector.classification.EMASmoothing
 pt/ipleiria/estg/meicm/ssc/poses/java/posedetector/classification/RepetitionCounter.java
@@ -62,10 +70,9 @@ pt/ipleiria/estg/meicm/ssc/poses/CameraSource.java
  pt.ipleiria.estg.meicm.ssc.poses.CameraSource$SizePair
 pt/ipleiria/estg/meicm/ssc/poses/preference/LivePreviewPreferenceFragment.java
  pt.ipleiria.estg.meicm.ssc.poses.preference.LivePreviewPreferenceFragment
-pt/ipleiria/estg/meicm/ssc/poses/java/CameraXLivePreviewActivity.java
- pt.ipleiria.estg.meicm.ssc.poses.java.CameraXLivePreviewActivity
 pt/ipleiria/estg/meicm/ssc/poses/java/LivePreviewActivity.java
  pt.ipleiria.estg.meicm.ssc.poses.java.LivePreviewActivity
-pt/ipleiria/estg/meicm/ssc/poses/java/posedetector/PoseDetectorProcessor.java
- pt.ipleiria.estg.meicm.ssc.poses.java.posedetector.PoseDetectorProcessor
- pt.ipleiria.estg.meicm.ssc.poses.java.posedetector.PoseDetectorProcessor$PoseWithClassification
+pt/ipleiria/estg/meicm/ssc/poses/preference/CameraXLivePreviewPreferenceFragment.java
+ pt.ipleiria.estg.meicm.ssc.poses.preference.CameraXLivePreviewPreferenceFragment
+pt/ipleiria/estg/meicm/ssc/poses/CameraXViewModel.java
+ pt.ipleiria.estg.meicm.ssc.poses.CameraXViewModel

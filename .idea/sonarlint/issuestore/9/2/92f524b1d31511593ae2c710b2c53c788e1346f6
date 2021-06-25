@@ -1,0 +1,118 @@
+
+o
+java:S1128"TRemove this unnecessary import: same package classes are always implicitly imported.(âôÇÊøÿÿÿÿ
+P
+java:S1874%":Remove this use of "PreferenceFragment"; it is deprecated.(´Šå­
+`
+java:S1874("JDon't override a deprecated method or explicitly mark it as "@Deprecated".(ßìê¯
+K
+java:S1874)"0Remove this use of "onCreate"; it is deprecated.(î±¨Ôøÿÿÿÿ
+]
+java:S1874+"BRemove this use of "addPreferencesFromResource"; it is deprecated.(‡´øÿÿÿÿ
+X	java:S125-"<This block of commented-out lines of code should be removed.(¢Öô8Šü…¤/
+P
+java:S18741":Remove this use of "PreferenceCategory"; it is deprecated.(ŠÑóÀ
+U
+java:S18742":Remove this use of "PreferenceCategory"; it is deprecated.(œ·„äùÿÿÿÿ
+Q
+java:S18742"6Remove this use of "findPreference"; it is deprecated.(œ·„äùÿÿÿÿ
+L
+java:S18742"1Remove this use of "getString"; it is deprecated.(œ·„äùÿÿÿÿ
+N
+java:S18743"8Remove this use of "removePreference"; it is deprecated.(ÔŠÙè
+Q
+java:S18744"6Remove this use of "findPreference"; it is deprecated.(ä£Àåıÿÿÿÿ
+L
+java:S18744"1Remove this use of "getString"; it is deprecated.(ä£Àåıÿÿÿÿ
+N
+java:S18745"8Remove this use of "removePreference"; it is deprecated.(ÔŠÙè
+L
+java:S18746"6Remove this use of "findPreference"; it is deprecated.(×â”Ì
+G
+java:S18746"1Remove this use of "getString"; it is deprecated.(×â”Ì
+Q
+java:S1874C"6Remove this use of "ListPreference"; it is deprecated.(ù‹»òıÿÿÿÿ
+Q
+java:S1874D"6Remove this use of "ListPreference"; it is deprecated.(Ü‡á­şÿÿÿÿ
+Q
+java:S1874D"6Remove this use of "findPreference"; it is deprecated.(Ü‡á­şÿÿÿÿ
+L
+java:S1874D"1Remove this use of "getString"; it is deprecated.(Ü‡á­şÿÿÿÿ
+I
+java:S1874F".Remove this use of "Camera"; it is deprecated.(«´Œøÿÿÿÿ
+I
+java:S1874H".Remove this use of "Camera"; it is deprecated.(ß¹ï¯øÿÿÿÿ
+G
+java:S1874H",Remove this use of "open"; it is deprecated.(ß¹ï¯øÿÿÿÿ
+H
+java:S1874U"2Remove this use of "setEntries"; it is deprecated.(ÌŒÒ
+L
+java:S1874V"6Remove this use of "setEntryValues"; it is deprecated.(å„‚Å
+K
+java:S1874X"0Remove this use of "getEntry"; it is deprecated.(ÔÅ±£ÿÿÿÿÿ
+K
+java:S1874`"0Remove this use of "setValue"; it is deprecated.(¥óÓĞúÿÿÿÿ
+H
+java:S1874a"2Remove this use of "setSummary"; it is deprecated.(ï–»›
+N
+java:S1874c"3Remove this use of "getActivity"; it is deprecated.( ü£éşÿÿÿÿ
+M
+java:S1874g"2Remove this use of "setSummary"; it is deprecated.(Ö¿À¶şÿÿÿÿ
+K
+java:S1874g"0Remove this use of "getEntry"; it is deprecated.(Ö¿À¶şÿÿÿÿ
+[
+java:S1874j"ERemove this use of "setOnPreferenceChangeListener"; it is deprecated.(ãÇÑØ
+M
+java:S1874m"2Remove this use of "setSummary"; it is deprecated.(Ø©•…øÿÿÿÿ
+N
+java:S1874o"3Remove this use of "getActivity"; it is deprecated.( ü£éşÿÿÿÿ
+O
+java:S1874v":Remove this use of "PreferenceCategory"; it is deprecated.(¬Ï¹
+K
+java:S1874v"6Remove this use of "findPreference"; it is deprecated.(¬Ï¹
+F
+java:S1874v"1Remove this use of "getString"; it is deprecated.(¬Ï¹
+N
+java:S1874w"8Remove this use of "removePreference"; it is deprecated.(íëÜ‘
+J
+java:S1874z"/Remove this use of "release"; it is deprecated.(ÃÏÏûÿÿÿÿ
+V
+java:S1874…":Remove this use of "EditTextPreference"; it is deprecated.(é–Ğøÿÿÿÿ
+V
+java:S1874†":Remove this use of "EditTextPreference"; it is deprecated.(Ùüıÿÿÿÿ
+R
+java:S1874‡"6Remove this use of "findPreference"; it is deprecated.(ÚîáÕüÿÿÿÿ
+M
+java:S1874‡"1Remove this use of "getString"; it is deprecated.(ÚîáÕüÿÿÿÿ
+N
+java:S1874ˆ"2Remove this use of "setSummary"; it is deprecated.(ŸªÚ—øÿÿÿÿ
+K
+java:S1874ˆ"/Remove this use of "getText"; it is deprecated.(ŸªÚ—øÿÿÿÿ
+\
+java:S1874‰"ERemove this use of "setOnPreferenceChangeListener"; it is deprecated.(şôÖø
+I
+java:S1874"2Remove this use of "setSummary"; it is deprecated.(Üó
+J
+java:S1874–"3Remove this use of "getActivity"; it is deprecated.(İï‚
+M
+java:S1874"6Remove this use of "ListPreference"; it is deprecated.(à•„Ÿ
+M
+java:S1874"6Remove this use of "ListPreference"; it is deprecated.(à•„Ÿ
+M
+java:S1874"6Remove this use of "findPreference"; it is deprecated.(à•„Ÿ
+H
+java:S1874"1Remove this use of "getString"; it is deprecated.(à•„Ÿ
+N
+java:S1874"2Remove this use of "setSummary"; it is deprecated.(•¢³Şúÿÿÿÿ
+L
+java:S1874"0Remove this use of "getEntry"; it is deprecated.(•¢³Şúÿÿÿÿ
+\
+java:S1874Ÿ"ERemove this use of "setOnPreferenceChangeListener"; it is deprecated.(·ºßñ
+O
+java:S1874¡"8Remove this use of "findIndexOfValue"; it is deprecated.(®‘¼¼
+N
+java:S1874¢"2Remove this use of "setSummary"; it is deprecated.(²ÜÒ²ÿÿÿÿÿ
+N
+java:S1874¢"2Remove this use of "getEntries"; it is deprecated.(²ÜÒ²ÿÿÿÿÿ
+_
+java:S1144"BRemove this unused private "setUpFaceDetectionPreferences" method.(è£¤Ì8©ü…¤/

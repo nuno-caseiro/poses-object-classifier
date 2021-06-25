@@ -36,7 +36,10 @@ import androidx.core.app.ActivityCompat.OnRequestPermissionsResultCallback;
 import androidx.core.content.ContextCompat;
 import com.google.android.gms.common.annotation.KeepName;
 import com.google.mlkit.common.MlKitException;
+
+import pt.ipleiria.estg.meicm.ssc.poses.AppData;
 import pt.ipleiria.estg.meicm.ssc.poses.CameraXViewModel;
+import pt.ipleiria.estg.meicm.ssc.poses.GMailSender;
 import pt.ipleiria.estg.meicm.ssc.poses.GraphicOverlay;
 import pt.ipleiria.estg.meicm.ssc.poses.R;
 import pt.ipleiria.estg.meicm.ssc.poses.VisionImageProcessor;
@@ -44,8 +47,19 @@ import pt.ipleiria.estg.meicm.ssc.poses.java.posedetector.PoseDetectorProcessor;
 import pt.ipleiria.estg.meicm.ssc.poses.preference.PreferenceUtils;
 import pt.ipleiria.estg.meicm.ssc.poses.preference.SettingsActivity;
 import com.google.mlkit.vision.pose.PoseDetectorOptionsBase;
+
+import org.eclipse.paho.android.service.MqttAndroidClient;
+import org.eclipse.paho.client.mqttv3.IMqttActionListener;
+import org.eclipse.paho.client.mqttv3.IMqttDeliveryToken;
+import org.eclipse.paho.client.mqttv3.IMqttToken;
+import org.eclipse.paho.client.mqttv3.MqttCallback;
+import org.eclipse.paho.client.mqttv3.MqttConnectOptions;
+import org.eclipse.paho.client.mqttv3.MqttMessage;
+
 import java.util.ArrayList;
 import java.util.List;
+
+import static kotlin.random.RandomKt.Random;
 
 /** Live preview demo app for ML Kit APIs using CameraX. */
 @KeepName
@@ -145,7 +159,54 @@ public final class CameraXLivePreviewActivity extends AppCompatActivity
     if (!allPermissionsGranted()) {
       getRuntimePermissions();
     }
+
+    connectMQTT();
   }
+
+  private void connectMQTT() {
+    String serverURI = "tcp://161.35.8.148:1883";
+      AppData.getInstance().mqttClient = new MqttAndroidClient(this, serverURI, "poses" + Random(4).toString() );
+      AppData.getInstance().mqttClient.setCallback(new MqttCallback() {
+        @Override
+        public void connectionLost(Throwable throwable) {
+          Log.d(TAG, "Connection lost");
+          connectMQTT();
+        }
+
+        @Override
+        public void messageArrived(String s, MqttMessage mqttMessage) throws Exception {
+
+        }
+
+        @Override
+        public void deliveryComplete(IMqttDeliveryToken iMqttDeliveryToken) {
+
+        }
+      });
+
+    MqttConnectOptions options = new MqttConnectOptions();
+    options.setUserName("smarthome");
+    String c = "smarthome";
+    options.setPassword(c.toCharArray());
+    options.setCleanSession(true);
+    try {
+      AppData.getInstance().mqttClient.connect(options, null, new IMqttActionListener() {
+        @Override
+        public void onSuccess(IMqttToken iMqttToken) {
+          Log.d(TAG, "Connection success");
+        }
+
+        @Override
+        public void onFailure(IMqttToken iMqttToken, Throwable throwable) {
+          Log.d(TAG, "Connection failure" + throwable);
+        }
+      });
+    }catch (Exception e){
+      Log.d(TAG, e.getMessage());
+
+    }
+  }
+
 
   @Override
   protected void onSaveInstanceState(@NonNull Bundle bundle) {

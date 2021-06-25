@@ -30,9 +30,6 @@ import com.google.mlkit.common.model.LocalModel;
 import pt.ipleiria.estg.meicm.ssc.poses.CameraSource;
 import pt.ipleiria.estg.meicm.ssc.poses.CameraSource.SizePair;
 import pt.ipleiria.estg.meicm.ssc.poses.R;
-import com.google.mlkit.vision.objects.ObjectDetectorOptionsBase.DetectorMode;
-import com.google.mlkit.vision.objects.custom.CustomObjectDetectorOptions;
-import com.google.mlkit.vision.objects.defaults.ObjectDetectorOptions;
 import com.google.mlkit.vision.pose.PoseDetectorOptionsBase;
 import com.google.mlkit.vision.pose.accurate.AccuratePoseDetectorOptions;
 import com.google.mlkit.vision.pose.defaults.PoseDetectorOptions;
@@ -97,56 +94,6 @@ public class PreferenceUtils {
     String prefKey =
         context.getString(R.string.pref_key_info_hide);
     return sharedPreferences.getBoolean(prefKey, false);
-  }
-
-  private static ObjectDetectorOptions getObjectDetectorOptions(
-      Context context,
-      @StringRes int prefKeyForMultipleObjects,
-      @StringRes int prefKeyForClassification,
-      @DetectorMode int mode) {
-
-    SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
-
-    boolean enableMultipleObjects =
-        sharedPreferences.getBoolean(context.getString(prefKeyForMultipleObjects), false);
-    boolean enableClassification =
-        sharedPreferences.getBoolean(context.getString(prefKeyForClassification), true);
-
-    ObjectDetectorOptions.Builder builder =
-        new ObjectDetectorOptions.Builder().setDetectorMode(mode);
-    if (enableMultipleObjects) {
-      builder.enableMultipleObjects();
-    }
-    if (enableClassification) {
-      builder.enableClassification();
-    }
-    return builder.build();
-  }
-
-
-  private static CustomObjectDetectorOptions getCustomObjectDetectorOptions(
-      Context context,
-      LocalModel localModel,
-      @StringRes int prefKeyForMultipleObjects,
-      @StringRes int prefKeyForClassification,
-      @DetectorMode int mode) {
-
-    SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
-
-    boolean enableMultipleObjects =
-        sharedPreferences.getBoolean(context.getString(prefKeyForMultipleObjects), false);
-    boolean enableClassification =
-        sharedPreferences.getBoolean(context.getString(prefKeyForClassification), true);
-
-    CustomObjectDetectorOptions.Builder builder =
-        new CustomObjectDetectorOptions.Builder(localModel).setDetectorMode(mode);
-    if (enableMultipleObjects) {
-      builder.enableMultipleObjects();
-    }
-    if (enableClassification) {
-      builder.enableClassification().setMaxPerObjectLabelCount(1);
-    }
-    return builder.build();
   }
 
   public static PoseDetectorOptionsBase getPoseDetectorOptionsForLivePreview(Context context) {
