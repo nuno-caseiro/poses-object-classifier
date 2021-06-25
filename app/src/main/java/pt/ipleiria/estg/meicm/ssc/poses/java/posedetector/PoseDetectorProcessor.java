@@ -139,23 +139,30 @@ public class PoseDetectorProcessor
             case "alert":
               sendMqttMsg(AppData.getInstance().alarmLed,"on");
               sendMqttMsg(AppData.getInstance().alarmBuzz,"on");
-              sendEmail("nunocas3iro@gmail.com","ALERT", "PLEASE HELP");
-              //TODO
-              //SEND EMAIL -> MORDOMO DIZ: AUTORIDADES ALERTADAS
+              //TODO UNCOMMENT
+              //sendEmail("nunocas3iro@gmail.com","ALERT", "PLEASE HELP");
+
+              msgToButler("ENVIEI ALERTA PARA AS AUTORIDADES");
               break;
             case "cold":
+              sendMqttMsg(AppData.getInstance().led1,"on");
+              msgToButler("Acabei de ligar o aquecedor");
               break;
             case "hot":
+              sendMqttMsg(AppData.getInstance().led2,"on");
+              msgToButler("Acabei de ligar a ventoinha");
               break;
             case "goal":
-              msgToButler("GOLOOOOOOOOOOO");
+              msgToButler("GOLO GOLO GOLO GOLO PORTUGAL");
               break;
-            case "chicken":
-              msgToButler("COCORO COCO COROCO COCO");
-              break;
+            //case "chicken":
+              //msgToButler("GALINHA");
+              //break;
             default:
               sendMqttMsg(AppData.getInstance().alarmLed,"off");
               sendMqttMsg(AppData.getInstance().alarmBuzz,"off");
+              sendMqttMsg(AppData.getInstance().led1,"off");
+              sendMqttMsg(AppData.getInstance().led2,"off");
               break;
           }
         }
@@ -184,22 +191,26 @@ public class PoseDetectorProcessor
   }
 
   private void msgToButler(String string)  {
-   try{
-     OkHttpClient client = new OkHttpClient().newBuilder()
-             .build();
-     MediaType mediaType = MediaType.parse("application/vnd.onem2mres+json; ty=4");
-     RequestBody body = RequestBody.create(mediaType, "{ \"m2m:cin\": {\"rn\": \"sentence"+Random(20).toString()+"\",\"cnf\":\"text/plain:0\",\"con\": \""+string+"\"} }\n");
-     Request request = new Request.Builder()
-             .url("http://127.0.0.1:7579/onem2m/butler/speakcnt")
-             .method("POST", body)
-             .addHeader("Content-Type", "application/vnd.onem2mres+json; ty=4")
-             .addHeader("X-M2M-RI", "0006")
-             .addHeader("Authorization", "Basic c3VwZXJhZG1pbjpzbWFydGhvbWUyMQ==")
-             .build();
-     Response response = client.newCall(request).execute();
-   }catch (Exception e){
-     Log.e("BUTLER MSG ERROR", e.getMessage());
-   }
+    new Thread(){
+      public void run() {
+        try {
+          OkHttpClient client = new OkHttpClient().newBuilder()
+                  .build();
+          MediaType mediaType = MediaType.parse("application/vnd.onem2mres+json; ty=4");
+          RequestBody body = RequestBody.create(mediaType, "{ \"m2m:cin\": {\"rn\": \"sentence" + Random(20).toString() + "\",\"cnf\":\"text/plain:0\",\"con\": \"" + string + "\"} }\n");
+          Request request = new Request.Builder()
+                  .url("http://192.168.1.78:7579/onem2m/butler/speakcnt")
+                  .method("POST", body)
+                  .addHeader("Content-Type", "application/vnd.onem2mres+json; ty=4")
+                  .addHeader("X-M2M-RI", "0006")
+                  .addHeader("Authorization", "Basic c3VwZXJhZG1pbjpzbWFydGhvbWUyMQ==")
+                  .build();
+          Response response = client.newCall(request).execute();
+        } catch (Exception e) {
+          Log.e("BUTLER MSG ERROR", e.getMessage());
+        }
+      }
+    }.start();
 
   }
 
