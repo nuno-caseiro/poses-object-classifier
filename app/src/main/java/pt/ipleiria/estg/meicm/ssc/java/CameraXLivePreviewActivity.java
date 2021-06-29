@@ -1,5 +1,5 @@
 
-package pt.ipleiria.estg.meicm.ssc.poses.java;
+package pt.ipleiria.estg.meicm.ssc.java;
 
 import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelProvider.AndroidViewModelFactory;
@@ -37,15 +37,15 @@ import androidx.core.content.ContextCompat;
 import com.google.android.gms.common.annotation.KeepName;
 import com.google.mlkit.common.MlKitException;
 
-import pt.ipleiria.estg.meicm.ssc.poses.AppData;
-import pt.ipleiria.estg.meicm.ssc.poses.CameraXViewModel;
-import pt.ipleiria.estg.meicm.ssc.poses.GraphicOverlay;
+import pt.ipleiria.estg.meicm.ssc.AppData;
+import pt.ipleiria.estg.meicm.ssc.CameraXViewModel;
+import pt.ipleiria.estg.meicm.ssc.GraphicOverlay;
 import pt.ipleiria.estg.meicm.ssc.poses.R;
-import pt.ipleiria.estg.meicm.ssc.poses.VisionImageProcessor;
-import pt.ipleiria.estg.meicm.ssc.poses.java.posedetector.PoseDetectorProcessor;
-import pt.ipleiria.estg.meicm.ssc.poses.java.objectdetector.ObjectDetectorProcessor;
-import pt.ipleiria.estg.meicm.ssc.poses.preference.PreferenceUtils;
-import pt.ipleiria.estg.meicm.ssc.poses.preference.SettingsActivity;
+import pt.ipleiria.estg.meicm.ssc.VisionImageProcessor;
+import pt.ipleiria.estg.meicm.ssc.java.posedetector.PoseDetectorProcessor;
+import pt.ipleiria.estg.meicm.ssc.java.objectdetector.ObjectDetectorProcessor;
+import pt.ipleiria.estg.meicm.ssc.preference.PreferenceUtils;
+import pt.ipleiria.estg.meicm.ssc.preference.SettingsActivity;
 
 import com.google.mlkit.common.model.LocalModel;
 import com.google.mlkit.vision.objects.custom.CustomObjectDetectorOptions;
@@ -227,6 +227,7 @@ public final class CameraXLivePreviewActivity extends AppCompatActivity
     Log.d(TAG, "Selected model: " + selectedModel);
     AppData.getInstance().actualPose = null;
     AppData.getInstance().previousPose = null;
+    AppData.getInstance().resetStates();
     bindAnalysisUseCase();
   }
 

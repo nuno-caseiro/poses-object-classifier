@@ -14,12 +14,14 @@
  * limitations under the License.
  */
 
-package pt.ipleiria.estg.meicm.ssc.poses.java.objectdetector;
+package pt.ipleiria.estg.meicm.ssc.java.objectdetector;
 
 import android.content.Context;
+import android.os.Build;
 import android.util.Log;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 
 import com.google.android.gms.tasks.Task;
 import com.google.mlkit.vision.common.InputImage;
@@ -29,44 +31,89 @@ import com.google.mlkit.vision.objects.ObjectDetector;
 import com.google.mlkit.vision.objects.ObjectDetectorOptionsBase;
 
 import java.util.List;
+import java.util.Objects;
 
-import pt.ipleiria.estg.meicm.ssc.poses.GraphicOverlay;
-import pt.ipleiria.estg.meicm.ssc.poses.java.VisionProcessorBase;
+import pt.ipleiria.estg.meicm.ssc.AppData;
+import pt.ipleiria.estg.meicm.ssc.GraphicOverlay;
+import pt.ipleiria.estg.meicm.ssc.java.VisionProcessorBase;
 
 
-/** A processor to run object detector. */
+/**
+ * A processor to run object detector.
+ */
 public class ObjectDetectorProcessor extends VisionProcessorBase<List<DetectedObject>> {
 
-  private static final String TAG = "ObjectDetectorProcessor";
+    private static final String TAG = "ObjectDetectorProcessor";
 
-  private final ObjectDetector detector;
+    private final ObjectDetector detector;
 
-  public ObjectDetectorProcessor(Context context, ObjectDetectorOptionsBase options) {
-    super(context);
-    detector = ObjectDetection.getClient(options);
-  }
-
-  @Override
-  public void stop() {
-    super.stop();
-    detector.close();
-  }
-
-  @Override
-  protected Task<List<DetectedObject>> detectInImage(InputImage image) {
-    return detector.process(image);
-  }
-
-  @Override
-  protected void onSuccess(
-      @NonNull List<DetectedObject> results, @NonNull GraphicOverlay graphicOverlay) {
-    for (DetectedObject object : results) {
-      graphicOverlay.add(new ObjectGraphic(graphicOverlay, object));
+    public ObjectDetectorProcessor(Context context, ObjectDetectorOptionsBase options) {
+        super(context);
+        detector = ObjectDetection.getClient(options);
     }
-  }
 
-  @Override
-  protected void onFailure(@NonNull Exception e) {
-    Log.e(TAG, "Object detection failed!", e);
-  }
+    @Override
+    public void stop() {
+        super.stop();
+        detector.close();
+    }
+
+    @Override
+    protected Task<List<DetectedObject>> detectInImage(InputImage image) {
+        return detector.process(image);
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
+    @Override
+    protected void onSuccess(
+            @NonNull List<DetectedObject> results, @NonNull GraphicOverlay graphicOverlay) {
+        for (DetectedObject object : results) {
+            graphicOverlay.add(new ObjectGraphic(graphicOverlay, object));
+        }
+        if (!results.isEmpty() && results.get(0).getLabels().get(0).getConfidence() > 0.85) {
+                String className = results.get(0).getLabels().get(0).getText();
+                AppData.getInstance().actualPose = className;
+                Log.e("RESULT", AppData.getInstance().actualPose);
+                handleClassDetected(className);
+        }
+
+    }
+
+
+    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
+    private void handleClassDetected(String className){
+        AppData appData = AppData.getInstance();
+        try{
+            if(!AppData.getInstance().actualPose.equals(AppData.getInstance().previousPose)){
+                switch (AppData.getInstance().actualPose){
+                    case "1":
+                    case "2":
+                    case "3":
+                    case "4":
+                    case "5":
+                        sendMqttMsg(appData.getId(Integer.parseInt(appData.actualPose)), "on");
+                        break;
+                    case "6":
+                        for (int i = 1; i <= 5 ; i++) {
+                            sendMqttMsg(appData.getId(i),"off");
+                        }
+                        sendMqttMsg(AppData.getInstance().alarmBuzz,"off");
+                        break;
+                    default:
+                        Log.d("Handle class", "Default");
+                        break;
+                }
+            }
+            AppData.getInstance().previousPose = className;
+        }catch (Exception e){
+            Log.e("ERROR MQTT", e.getMessage());
+        }
+
+    }
+
+
+    @Override
+    protected void onFailure(@NonNull Exception e) {
+        Log.e(TAG, "Object detection failed!", e);
+    }
 }

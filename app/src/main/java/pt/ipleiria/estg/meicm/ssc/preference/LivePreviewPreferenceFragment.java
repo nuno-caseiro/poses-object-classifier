@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package pt.ipleiria.estg.meicm.ssc.poses.preference;
+package pt.ipleiria.estg.meicm.ssc.preference;
 
 import android.hardware.Camera;
 import android.os.Bundle;
@@ -24,10 +24,9 @@ import android.preference.PreferenceCategory;
 import android.preference.PreferenceFragment;
 import android.widget.Toast;
 import androidx.annotation.StringRes;
-import pt.ipleiria.estg.meicm.ssc.poses.CameraSource;
-import pt.ipleiria.estg.meicm.ssc.poses.CameraSource.SizePair;
+import pt.ipleiria.estg.meicm.ssc.CameraSource;
+import pt.ipleiria.estg.meicm.ssc.CameraSource.SizePair;
 import pt.ipleiria.estg.meicm.ssc.poses.R;
-import pt.ipleiria.estg.meicm.ssc.poses.preference.PreferenceUtils;
 
 import java.util.HashMap;
 import java.util.List;

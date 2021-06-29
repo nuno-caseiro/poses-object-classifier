@@ -1,5 +1,5 @@
 
-package pt.ipleiria.estg.meicm.ssc.poses.java.posedetector.classification;
+package pt.ipleiria.estg.meicm.ssc.java.posedetector.classification;
 
 import static com.google.common.primitives.Floats.max;
 

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package pt.ipleiria.estg.meicm.ssc.poses.java;
+package pt.ipleiria.estg.meicm.ssc.java;
 
 import android.content.Context;
 import android.content.Intent;
@@ -36,14 +36,16 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.app.ActivityCompat.OnRequestPermissionsResultCallback;
 import androidx.core.content.ContextCompat;
 import com.google.android.gms.common.annotation.KeepName;
-import pt.ipleiria.estg.meicm.ssc.poses.CameraSource;
-import pt.ipleiria.estg.meicm.ssc.poses.CameraSourcePreview;
-import pt.ipleiria.estg.meicm.ssc.poses.GraphicOverlay;
+
+import pt.ipleiria.estg.meicm.ssc.AppData;
+import pt.ipleiria.estg.meicm.ssc.CameraSource;
+import pt.ipleiria.estg.meicm.ssc.CameraSourcePreview;
+import pt.ipleiria.estg.meicm.ssc.GraphicOverlay;
 import pt.ipleiria.estg.meicm.ssc.poses.R;
-import pt.ipleiria.estg.meicm.ssc.poses.java.objectdetector.ObjectDetectorProcessor;
-import pt.ipleiria.estg.meicm.ssc.poses.java.posedetector.PoseDetectorProcessor;
-import pt.ipleiria.estg.meicm.ssc.poses.preference.PreferenceUtils;
-import pt.ipleiria.estg.meicm.ssc.poses.preference.SettingsActivity;
+import pt.ipleiria.estg.meicm.ssc.java.objectdetector.ObjectDetectorProcessor;
+import pt.ipleiria.estg.meicm.ssc.java.posedetector.PoseDetectorProcessor;
+import pt.ipleiria.estg.meicm.ssc.preference.PreferenceUtils;
+import pt.ipleiria.estg.meicm.ssc.preference.SettingsActivity;
 
 import com.google.mlkit.common.model.LocalModel;
 import com.google.mlkit.vision.objects.custom.CustomObjectDetectorOptions;
@@ -123,8 +125,12 @@ public final class LivePreviewActivity extends AppCompatActivity
     // parent.getItemAtPosition(pos)
     selectedModel = parent.getItemAtPosition(pos).toString();
     Log.d(TAG, "Selected model: " + selectedModel);
+    AppData.getInstance().actualPose = null;
+    AppData.getInstance().previousPose = null;
+    AppData.getInstance().resetStates();
     preview.stop();
     if (allPermissionsGranted()) {
+
       createCameraSource(selectedModel);
       startCameraSource();
     } else {

@@ -1,4 +1,4 @@
-package pt.ipleiria.estg.meicm.ssc.poses.java.posedetector;
+package pt.ipleiria.estg.meicm.ssc.java.posedetector;
 
 import android.content.Context;
 import androidx.annotation.NonNull;
@@ -6,16 +6,11 @@ import android.util.Log;
 import com.google.android.gms.tasks.Task;
 import com.google.mlkit.vision.common.InputImage;
 
-import okhttp3.MediaType;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.RequestBody;
-import okhttp3.Response;
-import pt.ipleiria.estg.meicm.ssc.poses.AppData;
-import pt.ipleiria.estg.meicm.ssc.poses.GMailSender;
-import pt.ipleiria.estg.meicm.ssc.poses.GraphicOverlay;
-import pt.ipleiria.estg.meicm.ssc.poses.java.VisionProcessorBase;
-import pt.ipleiria.estg.meicm.ssc.poses.java.posedetector.classification.PoseClassifierProcessor;
+import pt.ipleiria.estg.meicm.ssc.AppData;
+import pt.ipleiria.estg.meicm.ssc.GMailSender;
+import pt.ipleiria.estg.meicm.ssc.GraphicOverlay;
+import pt.ipleiria.estg.meicm.ssc.java.VisionProcessorBase;
+import pt.ipleiria.estg.meicm.ssc.java.posedetector.classification.PoseClassifierProcessor;
 import com.google.mlkit.vision.pose.Pose;
 import com.google.mlkit.vision.pose.PoseDetection;
 import com.google.mlkit.vision.pose.PoseDetector;
@@ -25,11 +20,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
-
-import org.eclipse.paho.client.mqttv3.MqttException;
-import org.eclipse.paho.client.mqttv3.MqttMessage;
-import org.json.JSONException;
-import org.json.JSONObject;
 
 import static kotlin.random.RandomKt.Random;
 
@@ -129,49 +119,57 @@ public class PoseDetectorProcessor
     if (poseWithClassification.classificationResult.size() > 1){
         String className = poseWithClassification.classificationResult.get(1);
         String[] classNameD = className.split(":",2);
-        className = classNameD[0].trim();
-        AppData.getInstance().actualPose = className;
-        Log.e("RESULT", AppData.getInstance().actualPose);
-      try{
-        if(!AppData.getInstance().actualPose.equals(AppData.getInstance().previousPose)){
-          switch (AppData.getInstance().actualPose){
-            case "alert":
-              sendMqttMsg(AppData.getInstance().alarmLed,"on");
-              sendMqttMsg(AppData.getInstance().alarmBuzz,"on");
-              //TODO UNCOMMENT
-              //sendEmail("nunocas3iro@gmail.com","ALERT", "PLEASE HELP");
+        String[] confidenceD = classNameD[1].trim().split(" ",2);
+        String confidence = confidenceD[0].trim();
 
-              msgToButler("ENVIEI ALERTA PARA AS AUTORIDADES");
-              break;
-            case "cold":
-              sendMqttMsg(AppData.getInstance().led1,"on");
-              msgToButler("Acabei de ligar o aquecedor");
-              break;
-            case "hot":
-              sendMqttMsg(AppData.getInstance().led2,"on");
-              msgToButler("Acabei de ligar a ventoinha");
-              break;
-            case "goal":
-              msgToButler("GOLO GOLO GOLO GOLO PORTUGAL");
-              break;
-            //case "chicken":
-              //msgToButler("GALINHA");
-              //break;
-            default:
-              sendMqttMsg(AppData.getInstance().alarmLed,"off");
-              sendMqttMsg(AppData.getInstance().alarmBuzz,"off");
-              sendMqttMsg(AppData.getInstance().led1,"off");
-              sendMqttMsg(AppData.getInstance().led2,"off");
-              break;
-          }
+        if(Double.parseDouble(confidence) > 0.75){
+          className = classNameD[0].trim();
+          AppData.getInstance().actualPose = className;
+          Log.e("RESULT", AppData.getInstance().actualPose);
+          Log.e("confidence", confidence);
+          handleClassDetected(className);
         }
-        AppData.getInstance().previousPose = className;
-      }catch (Exception e){
-        Log.e("ERROR MQTT", e.getMessage());
-      }
-
 
     }
+  }
+
+  private void handleClassDetected(String className) {
+    AppData appData = AppData.getInstance();
+    try {
+      if (!appData.actualPose.equals(appData.previousPose)) {
+        switch (appData.actualPose) {
+          case "alert":
+            sendMqttMsg(appData.led6, "on");
+            sendMqttMsg(appData.alarmBuzz, "on");
+            //TODO UNCOMMENT
+            //sendEmail("nunocas3iro@gmail.com","ALERT", "PLEASE HELP");
+            msgToButler("ENVIEI ALERTA PARA AS AUTORIDADES");
+            break;
+          case "cold":
+            sendMqttMsg(appData.led1, "on");
+            msgToButler("Acabei de ligar o aquecedor");
+            break;
+          case "hot":
+            sendMqttMsg(appData.led2, "on");
+            msgToButler("Acabei de ligar a ventoinha");
+            break;
+          case "goal":
+            msgToButler("GOLO GOLO GOLO GOLO PORTUGAL");
+            break;
+          default:
+            sendMqttMsg(appData.led6, "off");
+            sendMqttMsg(appData.alarmBuzz, "off");
+            sendMqttMsg(appData.led1, "off");
+            sendMqttMsg(appData.led2, "off");
+            appData.resetStates();
+            break;
+        }
+      }
+      appData.previousPose = className;
+    } catch (Exception e) {
+      Log.e("ERROR MQTT", e.getMessage());
+    }
+
   }
 
   private void sendEmail(String receiverEmail, String subject, String body) throws Exception {
@@ -189,37 +187,9 @@ public class PoseDetectorProcessor
     }.start();
   }
 
-  private void msgToButler(String string)  {
-    new Thread(){
-      public void run() {
-        try {
-          OkHttpClient client = new OkHttpClient().newBuilder()
-                  .build();
-          MediaType mediaType = MediaType.parse("application/vnd.onem2mres+json; ty=4");
-          RequestBody body = RequestBody.create(mediaType, "{ \"m2m:cin\": {\"rn\": \"sentence" + Random(20).toString() + "\",\"cnf\":\"text/plain:0\",\"con\": \"" + string + "\"} }\n");
-          Request request = new Request.Builder()
-                  .url("http://192.168.1.78:7579/onem2m/butler/speakcnt")
-                  .method("POST", body)
-                  .addHeader("Content-Type", "application/vnd.onem2mres+json; ty=4")
-                  .addHeader("X-M2M-RI", "0006")
-                  .addHeader("Authorization", "Basic c3VwZXJhZG1pbjpzbWFydGhvbWUyMQ==")
-                  .build();
-          Response response = client.newCall(request).execute();
-        } catch (Exception e) {
-          Log.e("BUTLER MSG ERROR", e.getMessage());
-        }
-      }
-    }.start();
 
-  }
 
-  private void sendMqttMsg(int id, String status) throws JSONException, MqttException {
-    JSONObject jsn = new JSONObject("{to:'" + 841 + "','from':'android', 'action':'turn', 'value':'" + status + "'}");
-    MqttMessage send = new MqttMessage();
-    send.setPayload(jsn.toString().getBytes());
-    AppData.getInstance().mqttClient.publish("/" + id, send);
 
-  }
 
   @Override
   protected void onFailure(@NonNull Exception e) {

@@ -14,9 +14,7 @@
  * limitations under the License.
  */
 
-package pt.ipleiria.estg.meicm.ssc.poses.java.posedetector.classification;
-
-import pt.ipleiria.estg.meicm.ssc.poses.java.posedetector.classification.ClassificationResult;
+package pt.ipleiria.estg.meicm.ssc.java.posedetector.classification;
 
 /**
  * Counts reps for the give class.

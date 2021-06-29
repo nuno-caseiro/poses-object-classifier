@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package pt.ipleiria.estg.meicm.ssc.poses.java.objectdetector;
+package pt.ipleiria.estg.meicm.ssc.java.objectdetector;
 
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -25,7 +25,7 @@ import com.google.mlkit.vision.objects.DetectedObject.Label;
 
 import java.util.Locale;
 
-import pt.ipleiria.estg.meicm.ssc.poses.GraphicOverlay;
+import pt.ipleiria.estg.meicm.ssc.GraphicOverlay;
 
 /** Draw the detected object info in preview. */
 public class ObjectGraphic extends GraphicOverlay.Graphic {

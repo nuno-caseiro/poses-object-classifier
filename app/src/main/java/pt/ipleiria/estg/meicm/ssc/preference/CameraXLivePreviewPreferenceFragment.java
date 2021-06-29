@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package pt.ipleiria.estg.meicm.ssc.poses.preference;
+package pt.ipleiria.estg.meicm.ssc.preference;
 
 import android.content.Context;
 import android.graphics.SurfaceTexture;
@@ -31,8 +31,6 @@ import android.util.Size;
 import androidx.annotation.StringRes;
 import androidx.camera.core.CameraSelector;
 import pt.ipleiria.estg.meicm.ssc.poses.R;
-import pt.ipleiria.estg.meicm.ssc.poses.preference.LivePreviewPreferenceFragment;
-import pt.ipleiria.estg.meicm.ssc.poses.preference.PreferenceUtils;
 
 import java.util.Arrays;
 import java.util.List;

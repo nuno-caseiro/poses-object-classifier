@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package pt.ipleiria.estg.meicm.ssc.poses.preference;
+package pt.ipleiria.estg.meicm.ssc.preference;
 
 import android.os.Bundle;
 import android.preference.PreferenceFragment;

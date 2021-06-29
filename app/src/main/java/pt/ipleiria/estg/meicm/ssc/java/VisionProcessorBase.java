@@ -14,10 +14,11 @@
  * limitations under the License.
  */
 
-package pt.ipleiria.estg.meicm.ssc.poses.java;
+package pt.ipleiria.estg.meicm.ssc.java;
 
 import static java.lang.Math.max;
 import static java.lang.Math.min;
+import static kotlin.random.RandomKt.Random;
 
 import android.app.ActivityManager;
 import android.app.ActivityManager.MemoryInfo;
@@ -36,14 +37,26 @@ import androidx.camera.core.ImageProxy;
 import com.google.android.gms.tasks.Task;
 import com.google.android.gms.tasks.TaskExecutors;
 import com.google.mlkit.vision.common.InputImage;
-import pt.ipleiria.estg.meicm.ssc.poses.BitmapUtils;
-import pt.ipleiria.estg.meicm.ssc.poses.CameraImageGraphic;
-import pt.ipleiria.estg.meicm.ssc.poses.FrameMetadata;
-import pt.ipleiria.estg.meicm.ssc.poses.GraphicOverlay;
-import pt.ipleiria.estg.meicm.ssc.poses.InferenceInfoGraphic;
-import pt.ipleiria.estg.meicm.ssc.poses.ScopedExecutor;
-import pt.ipleiria.estg.meicm.ssc.poses.VisionImageProcessor;
-import pt.ipleiria.estg.meicm.ssc.poses.preference.PreferenceUtils;
+
+import org.eclipse.paho.client.mqttv3.MqttException;
+import org.eclipse.paho.client.mqttv3.MqttMessage;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import okhttp3.MediaType;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.RequestBody;
+import okhttp3.Response;
+import pt.ipleiria.estg.meicm.ssc.AppData;
+import pt.ipleiria.estg.meicm.ssc.BitmapUtils;
+import pt.ipleiria.estg.meicm.ssc.CameraImageGraphic;
+import pt.ipleiria.estg.meicm.ssc.FrameMetadata;
+import pt.ipleiria.estg.meicm.ssc.GraphicOverlay;
+import pt.ipleiria.estg.meicm.ssc.InferenceInfoGraphic;
+import pt.ipleiria.estg.meicm.ssc.ScopedExecutor;
+import pt.ipleiria.estg.meicm.ssc.VisionImageProcessor;
+import pt.ipleiria.estg.meicm.ssc.preference.PreferenceUtils;
 import java.nio.ByteBuffer;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -307,9 +320,43 @@ public abstract class VisionProcessorBase<T> implements VisionImageProcessor {
     minDetectorMs = Long.MAX_VALUE;
   }
 
+  protected void sendMqttMsg(int id, String status) throws JSONException, MqttException {
+    JSONObject jsn = new JSONObject("{to:'" + 841 + "','from':'android', 'action':'turn', 'value':'" + status + "'}");
+    MqttMessage send = new MqttMessage();
+    send.setPayload(jsn.toString().getBytes());
+    AppData.getInstance().mqttClient.publish("/" + id, send);
+
+  }
+
+  protected void msgToButler(String string)  {
+    new Thread(){
+      public void run() {
+        try {
+          OkHttpClient client = new OkHttpClient().newBuilder()
+                  .build();
+          MediaType mediaType = MediaType.parse("application/vnd.onem2mres+json; ty=4");
+          RequestBody body = RequestBody.create(mediaType, "{ \"m2m:cin\": {\"rn\": \"sentence" + Random(20).toString() + "\",\"cnf\":\"text/plain:0\",\"con\": \"" + string + "\"} }\n");
+          Request request = new Request.Builder()
+                  .url("http://192.168.1.78:7579/onem2m/butler/speakcnt")
+                  .method("POST", body)
+                  .addHeader("Content-Type", "application/vnd.onem2mres+json; ty=4")
+                  .addHeader("X-M2M-RI", "0006")
+                  .addHeader("Authorization", "Basic c3VwZXJhZG1pbjpzbWFydGhvbWUyMQ==")
+                  .build();
+          Response response = client.newCall(request).execute();
+        } catch (Exception e) {
+          Log.e("BUTLER MSG ERROR", e.getMessage());
+        }
+      }
+    }.start();
+
+  }
+
   protected abstract Task<T> detectInImage(InputImage image);
 
   protected abstract void onSuccess(@NonNull T results, @NonNull GraphicOverlay graphicOverlay);
 
   protected abstract void onFailure(@NonNull Exception e);
+
+
 }

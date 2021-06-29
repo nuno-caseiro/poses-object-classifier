@@ -1,6 +1,6 @@
 
 
-package pt.ipleiria.estg.meicm.ssc.poses.java.posedetector;
+package pt.ipleiria.estg.meicm.ssc.java.posedetector;
 
 import static java.lang.Math.max;
 import static java.lang.Math.min;
@@ -11,8 +11,8 @@ import android.graphics.Paint;
 import android.graphics.PointF;
 import com.google.common.primitives.Ints;
 import com.google.mlkit.vision.common.PointF3D;
-import pt.ipleiria.estg.meicm.ssc.poses.GraphicOverlay;
-import pt.ipleiria.estg.meicm.ssc.poses.GraphicOverlay.Graphic;
+import pt.ipleiria.estg.meicm.ssc.GraphicOverlay;
+import pt.ipleiria.estg.meicm.ssc.GraphicOverlay.Graphic;
 import com.google.mlkit.vision.pose.Pose;
 import com.google.mlkit.vision.pose.PoseLandmark;
 import java.util.List;

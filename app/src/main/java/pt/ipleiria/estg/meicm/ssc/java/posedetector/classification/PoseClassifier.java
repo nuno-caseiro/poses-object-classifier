@@ -1,11 +1,11 @@
-package pt.ipleiria.estg.meicm.ssc.poses.java.posedetector.classification;
+package pt.ipleiria.estg.meicm.ssc.java.posedetector.classification;
 
-import static pt.ipleiria.estg.meicm.ssc.poses.java.posedetector.classification.PoseEmbedding.getPoseEmbedding;
-import static pt.ipleiria.estg.meicm.ssc.poses.java.posedetector.classification.Utils.maxAbs;
-import static pt.ipleiria.estg.meicm.ssc.poses.java.posedetector.classification.Utils.multiply;
-import static pt.ipleiria.estg.meicm.ssc.poses.java.posedetector.classification.Utils.multiplyAll;
-import static pt.ipleiria.estg.meicm.ssc.poses.java.posedetector.classification.Utils.subtract;
-import static pt.ipleiria.estg.meicm.ssc.poses.java.posedetector.classification.Utils.sumAbs;
+import static pt.ipleiria.estg.meicm.ssc.java.posedetector.classification.PoseEmbedding.getPoseEmbedding;
+import static pt.ipleiria.estg.meicm.ssc.java.posedetector.classification.Utils.maxAbs;
+import static pt.ipleiria.estg.meicm.ssc.java.posedetector.classification.Utils.multiply;
+import static pt.ipleiria.estg.meicm.ssc.java.posedetector.classification.Utils.multiplyAll;
+import static pt.ipleiria.estg.meicm.ssc.java.posedetector.classification.Utils.subtract;
+import static pt.ipleiria.estg.meicm.ssc.java.posedetector.classification.Utils.sumAbs;
 import static java.lang.Math.max;
 import static java.lang.Math.min;
 

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package pt.ipleiria.estg.meicm.ssc.poses.preference;
+package pt.ipleiria.estg.meicm.ssc.preference;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -27,8 +27,8 @@ import androidx.camera.core.CameraSelector;
 import com.google.android.gms.common.images.Size;
 import com.google.common.base.Preconditions;
 import com.google.mlkit.common.model.LocalModel;
-import pt.ipleiria.estg.meicm.ssc.poses.CameraSource;
-import pt.ipleiria.estg.meicm.ssc.poses.CameraSource.SizePair;
+import pt.ipleiria.estg.meicm.ssc.CameraSource;
+import pt.ipleiria.estg.meicm.ssc.CameraSource.SizePair;
 import pt.ipleiria.estg.meicm.ssc.poses.R;
 
 import com.google.mlkit.vision.objects.ObjectDetectorOptionsBase;

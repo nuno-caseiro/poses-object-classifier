@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package pt.ipleiria.estg.meicm.ssc.poses.java.posedetector.classification;
+package pt.ipleiria.estg.meicm.ssc.java.posedetector.classification;
 
 import android.util.Log;
 import com.google.common.base.Splitter;

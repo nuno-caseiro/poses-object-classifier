@@ -1,4 +1,4 @@
-package pt.ipleiria.estg.meicm.ssc.poses.java.posedetector.classification;
+package pt.ipleiria.estg.meicm.ssc.java.posedetector.classification;
 
 import java.util.Deque;
 import java.util.HashSet;

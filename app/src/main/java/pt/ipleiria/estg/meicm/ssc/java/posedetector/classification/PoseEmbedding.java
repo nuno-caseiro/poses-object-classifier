@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package pt.ipleiria.estg.meicm.ssc.poses.java.posedetector.classification;
+package pt.ipleiria.estg.meicm.ssc.java.posedetector.classification;
 
-import static pt.ipleiria.estg.meicm.ssc.poses.java.posedetector.classification.Utils.average;
-import static pt.ipleiria.estg.meicm.ssc.poses.java.posedetector.classification.Utils.l2Norm2D;
-import static pt.ipleiria.estg.meicm.ssc.poses.java.posedetector.classification.Utils.multiplyAll;
-import static pt.ipleiria.estg.meicm.ssc.poses.java.posedetector.classification.Utils.subtract;
-import static pt.ipleiria.estg.meicm.ssc.poses.java.posedetector.classification.Utils.subtractAll;
+import static pt.ipleiria.estg.meicm.ssc.java.posedetector.classification.Utils.average;
+import static pt.ipleiria.estg.meicm.ssc.java.posedetector.classification.Utils.l2Norm2D;
+import static pt.ipleiria.estg.meicm.ssc.java.posedetector.classification.Utils.multiplyAll;
+import static pt.ipleiria.estg.meicm.ssc.java.posedetector.classification.Utils.subtract;
+import static pt.ipleiria.estg.meicm.ssc.java.posedetector.classification.Utils.subtractAll;
 
 import com.google.mlkit.vision.common.PointF3D;
 import com.google.mlkit.vision.pose.PoseLandmark;
