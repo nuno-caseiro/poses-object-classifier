@@ -1,0 +1,11 @@
+
+\	java:S112¯"FDefine and throw a dedicated exception instead of using a generic one.(ª£äÒ
+R	java:S125‘"<This block of commented-out lines of code should be removed.(é˜ä
+N
+java:S1135"2Complete the task associated to this TODO comment.(î¥ãÔüÿÿÿÿ
+ƒ
+java:S1130¯"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(ª£äÒ
+Q
+java:S1161²":Add the "@Override" annotation above this method signature(“–ýþ
+E
+java:S1144¯".Remove this unused private "sendEmail" method.(ª£äÒ

@@ -1,0 +1,32 @@
+
+‰
+java:S1319"nThe type of the "states" object should be an interface such as "Map" rather than the implementation "HashMap".(Ì¬µıûÿÿÿÿ
+s
+java:S1104"XMake previousPose a static final constant or non-public and provide accessors if needed.(ê…šñúÿÿÿÿ
+q
+java:S1104"VMake actualPose a static final constant or non-public and provide accessors if needed.(Ê¶ŸÓúÿÿÿÿ
+l
+java:S1104"VMake mqttClient a static final constant or non-public and provide accessors if needed.(ªûÁë
+e
+java:S1104"PMake led6 a static final constant or non-public and provide accessors if needed.(ú‚C
+k
+java:S1104"UMake alarmBuzz a static final constant or non-public and provide accessors if needed.(ğÇÌû
+k
+java:S1104"PMake led2 a static final constant or non-public and provide accessors if needed.(¼½”¢şÿÿÿÿ
+k
+java:S1104"PMake led3 a static final constant or non-public and provide accessors if needed.(¯øÂúÿÿÿÿ
+f
+java:S1104"PMake led4 a static final constant or non-public and provide accessors if needed.(ÇÍÄŞ
+f
+java:S1104"PMake led5 a static final constant or non-public and provide accessors if needed.(«ùô
+m
+java:S1104"RMake states a static final constant or non-public and provide accessors if needed.(Ì¬µıûÿÿÿÿ
+n
+java:S1104"XMake countForDice a static final constant or non-public and provide accessors if needed.(•Ç—
+o
+java:S1104"TMake sequence a static final constant or non-public and provide accessors if needed.(ÇŠõøÿÿÿÿ
+
+java:S1104"]Make sequenceToAchieve a static final constant or non-public and provide accessors if needed.(®œŒ”ûÿÿÿÿ8ùş©¥/
+>
+java:S1170"!Make this final field static too.(û©úö8ú©¥/
+<	java:S131&""Add a default case to this switch.(Ò“ÿšùÿÿÿÿ
