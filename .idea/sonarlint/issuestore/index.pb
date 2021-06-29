@@ -1,6 +1,4 @@
 
-X
-(gradle/wrapper/gradle-wrapper.properties,f/b/fbe448ebfc3eb2d4e308f6b8b043666f5b57235e
 ñ
 fapp/src/main/java/pt/ipleiria/estg/meicm/ssc/poses/java/posedetector/classification/PoseEmbedding.java,b/9/b9cf644500941a3f256d9e29cdf49a3399c9adfe
 ì
@@ -19,8 +17,6 @@ Dapp/src/main/java/pt/ipleiria/estg/meicm/ssc/poses/CameraSource.java,d/8/d8dae
 Kapp/src/main/java/pt/ipleiria/estg/meicm/ssc/poses/CameraSourcePreview.java,c/8/c81805b777c3f8e59ed895b36f85529c3daf1039
 x
 Happ/src/main/java/pt/ipleiria/estg/meicm/ssc/poses/CameraXViewModel.java,5/b/5bd6f15d8c63a31f2646bb38028ac0bd6d349095
-ó
-gapp/src/main/java/pt/ipleiria/estg/meicm/ssc/poses/preference/CameraXLivePreviewPreferenceFragment.java,0/0/00215414c442eaecaf1456aa5acb7685ea39761b
 É
 Sapp/src/main/java/pt/ipleiria/estg/meicm/ssc/poses/preference/SettingsActivity.java,f/0/f0dc5f8f73243a4e515f50e8ca05df4bcf88d321
 ö
@@ -29,8 +25,6 @@ japp/src/main/java/pt/ipleiria/estg/meicm/ssc/poses/java/posedetector/classifica
 gapp/src/main/java/pt/ipleiria/estg/meicm/ssc/poses/java/posedetector/classification/PoseClassifier.java,0/0/00492821c55b63cbdbfbbf9e88c1f6bc6ee7b1db
 ê
 `app/src/main/java/pt/ipleiria/estg/meicm/ssc/poses/preference/LivePreviewPreferenceFragment.java,9/2/92f524b1d31511593ae2c710b2c53c788e1346f6
-Ä
-Papp/src/main/java/pt/ipleiria/estg/meicm/ssc/poses/java/VisionProcessorBase.java,4/7/470f1daf975a43b1427133e9aaffdcfb166e0195
 v
 Fapp/src/main/java/pt/ipleiria/estg/meicm/ssc/poses/GraphicOverlay.java,c/1/c15695dfd659397934910a54d690eed554234a2d
 ù
@@ -43,17 +37,7 @@ v
 Fapp/src/main/java/pt/ipleiria/estg/meicm/ssc/poses/ScopedExecutor.java,6/b/6b820657a0c8b7ed37c0f9eb3c9ed95d901b7a75
 Ö
 Uapp/src/main/java/pt/ipleiria/estg/meicm/ssc/poses/java/posedetector/PoseGraphic.java,e/5/e5fa4c55ec7d8f6f49cbeac34a551d095a40d308
-Ç
-Rapp/src/main/java/pt/ipleiria/estg/meicm/ssc/poses/preference/PreferenceUtils.java,a/2/a2661e780c199303c7d0dea6faa11e5f4f9121e9
-Ä
-Papp/src/main/java/pt/ipleiria/estg/meicm/ssc/poses/java/LivePreviewActivity.java,e/b/ebd00cc59f8314c8f250c16fc32ba3371197240d
-@
-local.properties,0/7/0712df971a99ac4d2fccb8e0fb19f377f3374cca
-P
- app/src/main/AndroidManifest.xml,8/c/8c55c3ccc257e5907959013f99656e4c8ec3903e
-o
-?app/src/main/java/pt/ipleiria/estg/meicm/ssc/poses/AppData.java,4/5/45183d86f20d9b68c332aa220e371f7efd3f513d
-A
-gradle.properties,2/a/2afbb999f001938c88fa43fc2ef52abf0f8213e4
 s
 Capp/src/main/java/pt/ipleiria/estg/meicm/ssc/poses/GMailSender.java,f/b/fb2cfcda065cb10998158add80224c339227a245
+†
+papp/src/main/java/pt/ipleiria/estg/meicm/ssc/poses/java/posedetector/classification/PoseClassifierProcessor.java,e/8/e8f0523923bfad489a8e066394c05d3f8043da3b

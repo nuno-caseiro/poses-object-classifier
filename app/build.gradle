@@ -15,7 +15,7 @@ android {
         versionName "1.11"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
-        setProperty("archivesBaseName", "vision-quickstart")
+        setProperty("archivesBaseName", "poses-object")
     }
     buildTypes {
         proguard {
@@ -66,6 +66,12 @@ dependencies {
     implementation 'com.google.mlkit:pose-detection:17.0.1-beta3'
     // Pose detection with accurate models
     implementation 'com.google.mlkit:pose-detection-accurate:17.0.1-beta3'
+
+    // Object detection feature with bundled default classifier
+    implementation 'com.google.mlkit:object-detection:16.2.5'
+
+    // Object detection feature with custom classifier support
+    implementation 'com.google.mlkit:object-detection-custom:16.3.2'
 
 
     // -------------------------------------------------------

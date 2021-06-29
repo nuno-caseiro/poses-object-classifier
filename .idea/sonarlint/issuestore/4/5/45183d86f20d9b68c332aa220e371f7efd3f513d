@@ -1,22 +1,0 @@
-
-j
-java:S1104	"TMake lastPose a static final constant or non-public and provide accessors if needed.(¾’Þã
-q
-java:S1104
-"VMake actualPose a static final constant or non-public and provide accessors if needed.(Ê¶ŸÓúÿÿÿÿ
-l
-java:S1104"VMake mqttClient a static final constant or non-public and provide accessors if needed.(ªûÁë
-j
-java:S1104"TMake alarmLed a static final constant or non-public and provide accessors if needed.(œ¾¯À
-k
-java:S1104"UMake alarmBuzz a static final constant or non-public and provide accessors if needed.(ðÇÌû
-f
-java:S1104"PMake led1 a static final constant or non-public and provide accessors if needed.(£†¶£
-k
-java:S1104"PMake led2 a static final constant or non-public and provide accessors if needed.(¼½”¢þÿÿÿÿ
-k
-java:S1104"PMake led3 a static final constant or non-public and provide accessors if needed.(ž¯øÂúÿÿÿÿ
-f
-java:S1104"PMake led4 a static final constant or non-public and provide accessors if needed.(ÇÍÄÞ
-f
-java:S1104"PMake led5 a static final constant or non-public and provide accessors if needed.(«ùôŽ

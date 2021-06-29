@@ -1,2 +1,2 @@
-rootProject.name='ProjectPoses'
+rootProject.name='ProjectPosesObject'
 include ':app'
