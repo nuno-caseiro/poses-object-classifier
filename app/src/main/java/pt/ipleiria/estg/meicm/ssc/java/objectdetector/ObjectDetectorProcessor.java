@@ -30,9 +30,8 @@ import com.google.mlkit.vision.objects.ObjectDetection;
 import com.google.mlkit.vision.objects.ObjectDetector;
 import com.google.mlkit.vision.objects.ObjectDetectorOptionsBase;
 
+import java.util.Arrays;
 import java.util.List;
-import java.util.Objects;
-
 import pt.ipleiria.estg.meicm.ssc.AppData;
 import pt.ipleiria.estg.meicm.ssc.GraphicOverlay;
 import pt.ipleiria.estg.meicm.ssc.java.VisionProcessorBase;
@@ -70,7 +69,7 @@ public class ObjectDetectorProcessor extends VisionProcessorBase<List<DetectedOb
         for (DetectedObject object : results) {
             graphicOverlay.add(new ObjectGraphic(graphicOverlay, object));
         }
-        if (!results.isEmpty() && results.get(0).getLabels().get(0).getConfidence() > 0.85) {
+        if (!results.isEmpty() && results.get(0).getLabels().get(0).getConfidence() > 0.80) {
                 String className = results.get(0).getLabels().get(0).getText();
                 AppData.getInstance().actualPose = className;
                 Log.e("RESULT", AppData.getInstance().actualPose);
@@ -84,8 +83,8 @@ public class ObjectDetectorProcessor extends VisionProcessorBase<List<DetectedOb
     private void handleClassDetected(String className){
         AppData appData = AppData.getInstance();
         try{
-            if(!AppData.getInstance().actualPose.equals(AppData.getInstance().previousPose)){
-                switch (AppData.getInstance().actualPose){
+            if(!appData.actualPose.equals(appData.previousPose)){
+                switch (appData.actualPose){
                     case "1":
                     case "2":
                     case "3":
@@ -98,11 +97,26 @@ public class ObjectDetectorProcessor extends VisionProcessorBase<List<DetectedOb
                             sendMqttMsg(appData.getId(i),"off");
                         }
                         sendMqttMsg(AppData.getInstance().alarmBuzz,"off");
+                        appData.countForDice = 0;
                         break;
                     default:
                         Log.d("Handle class", "Default");
                         break;
                 }
+
+                appData.sequence[appData.countForDice] = Integer.parseInt(appData.actualPose);
+
+                if(appData.countForDice == 2){
+                    appData.countForDice = 0;
+                }
+
+                appData.countForDice ++ ;
+
+                Log.e("ARRAY", Arrays.toString(appData.sequence));
+                if(Arrays.equals(appData.sequence,appData.sequenceToAchieve)){
+                    sendMqttMsg(AppData.getInstance().alarmBuzz,"on");
+                }
+
             }
             AppData.getInstance().previousPose = className;
         }catch (Exception e){

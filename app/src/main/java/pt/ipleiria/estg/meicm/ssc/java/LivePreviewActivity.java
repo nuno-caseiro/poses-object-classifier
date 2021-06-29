@@ -128,6 +128,7 @@ public final class LivePreviewActivity extends AppCompatActivity
     AppData.getInstance().actualPose = null;
     AppData.getInstance().previousPose = null;
     AppData.getInstance().resetStates();
+    AppData.getInstance().countForDice = 0;
     preview.stop();
     if (allPermissionsGranted()) {
 

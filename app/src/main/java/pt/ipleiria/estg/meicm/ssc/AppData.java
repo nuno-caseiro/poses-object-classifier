@@ -23,6 +23,10 @@ public class AppData {
 
     public HashMap<String, String> states = new HashMap<>();
 
+    public int countForDice = 0;
+    public int[] sequence = new int[]{0,0,0};
+    public int[] sequenceToAchieve = new int[]{1,2,3};
+
 
     // private constructor restricted to this class itself
     private AppData()
