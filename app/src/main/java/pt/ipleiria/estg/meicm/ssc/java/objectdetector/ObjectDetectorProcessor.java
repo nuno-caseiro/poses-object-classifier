@@ -67,13 +67,16 @@ public class ObjectDetectorProcessor extends VisionProcessorBase<List<DetectedOb
     protected void onSuccess(
             @NonNull List<DetectedObject> results, @NonNull GraphicOverlay graphicOverlay) {
         for (DetectedObject object : results) {
-            graphicOverlay.add(new ObjectGraphic(graphicOverlay, object));
-        }
-        if (!results.isEmpty() && results.get(0).getLabels().get(0).getConfidence() > 0.80) {
+            //graphicOverlay.add(new ObjectGraphic(graphicOverlay, object));
+
+        Log.e("RESULTS:", String.valueOf(results.size()));
+        if (!results.isEmpty() && results.get(0).getLabels().get(0).getConfidence() > 0.70) {
                 String className = results.get(0).getLabels().get(0).getText();
                 AppData.getInstance().actualPose = className;
                 Log.e("RESULT", AppData.getInstance().actualPose);
                 handleClassDetected(className);
+        }
+                graphicOverlay.add(new ObjectGraphic(graphicOverlay, object));
         }
 
     }
@@ -84,6 +87,11 @@ public class ObjectDetectorProcessor extends VisionProcessorBase<List<DetectedOb
         AppData appData = AppData.getInstance();
         try{
             if(!appData.actualPose.equals(appData.previousPose)){
+
+                if(appData.countForDice > 2){
+                    appData.countForDice = 0;
+                }
+
                 switch (appData.actualPose){
                     case "1":
                     case "2":
@@ -104,17 +112,15 @@ public class ObjectDetectorProcessor extends VisionProcessorBase<List<DetectedOb
                         break;
                 }
 
-                appData.sequence[appData.countForDice] = Integer.parseInt(appData.actualPose);
+                if(!appData.actualPose.equals("6")){
+                    appData.sequence[appData.countForDice] = Integer.parseInt(appData.actualPose);
 
-                if(appData.countForDice == 2){
-                    appData.countForDice = 0;
-                }
+                    appData.countForDice ++ ;
 
-                appData.countForDice ++ ;
-
-                Log.e("ARRAY", Arrays.toString(appData.sequence));
-                if(Arrays.equals(appData.sequence,appData.sequenceToAchieve)){
-                    sendMqttMsg(AppData.getInstance().alarmBuzz,"on");
+                    Log.e("ARRAY", Arrays.toString(appData.sequence));
+                    if(Arrays.equals(appData.sequence,appData.sequenceToAchieve)){
+                        sendMqttMsg(AppData.getInstance().alarmBuzz,"on");
+                    }
                 }
 
             }

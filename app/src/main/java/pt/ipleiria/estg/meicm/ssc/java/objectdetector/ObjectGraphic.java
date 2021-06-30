@@ -23,8 +23,10 @@ import android.graphics.RectF;
 import com.google.mlkit.vision.objects.DetectedObject;
 import com.google.mlkit.vision.objects.DetectedObject.Label;
 
+import java.util.Arrays;
 import java.util.Locale;
 
+import pt.ipleiria.estg.meicm.ssc.AppData;
 import pt.ipleiria.estg.meicm.ssc.GraphicOverlay;
 
 /** Draw the detected object info in preview. */
@@ -47,7 +49,7 @@ public class ObjectGraphic extends GraphicOverlay.Graphic {
         {Color.WHITE, Color.BLACK},
         {Color.BLACK, Color.GREEN}
       };
-  private static final String LABEL_FORMAT = "%.2f%% confidence (index: %d)";
+  private static final String LABEL_FORMAT = "%.2f%% confidence (%s)";
 
   private final DetectedObject object;
   private final Paint[] boxPaints;
@@ -90,13 +92,13 @@ public class ObjectGraphic extends GraphicOverlay.Graphic {
 
     // Calculate width and height of label box
     for (Label label : object.getLabels()) {
-      textWidth = Math.max(textWidth, textPaints[colorID].measureText(label.getText()));
+      textWidth = Math.max(textWidth, textPaints[colorID].measureText(Arrays.toString(AppData.getInstance().sequence)));
       textWidth =
           Math.max(
               textWidth,
               textPaints[colorID].measureText(
                   String.format(
-                      Locale.US, LABEL_FORMAT, label.getConfidence() * 100, label.getIndex())));
+                      Locale.US, LABEL_FORMAT, label.getConfidence() * 100, Arrays.toString(AppData.getInstance().sequence))));
       yLabelOffset -= 2 * lineHeight;
     }
 
@@ -130,7 +132,7 @@ public class ObjectGraphic extends GraphicOverlay.Graphic {
       canvas.drawText(label.getText(), rect.left, rect.top + yLabelOffset, textPaints[colorID]);
       yLabelOffset += lineHeight;
       canvas.drawText(
-          String.format(Locale.US, LABEL_FORMAT, label.getConfidence() * 100, label.getIndex()),
+          String.format(Locale.US, LABEL_FORMAT, label.getConfidence() * 100, Arrays.toString(AppData.getInstance().sequence)),
           rect.left,
           rect.top + yLabelOffset,
           textPaints[colorID]);

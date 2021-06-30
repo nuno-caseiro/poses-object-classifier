@@ -18,7 +18,6 @@ package pt.ipleiria.estg.meicm.ssc.java;
 
 import static java.lang.Math.max;
 import static java.lang.Math.min;
-import static kotlin.random.RandomKt.Random;
 
 import android.app.ActivityManager;
 import android.app.ActivityManager.MemoryInfo;
@@ -43,6 +42,7 @@ import org.eclipse.paho.client.mqttv3.MqttMessage;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import kotlin.random.Random;
 import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -335,7 +335,7 @@ public abstract class VisionProcessorBase<T> implements VisionImageProcessor {
           OkHttpClient client = new OkHttpClient().newBuilder()
                   .build();
           MediaType mediaType = MediaType.parse("application/vnd.onem2mres+json; ty=4");
-          RequestBody body = RequestBody.create(mediaType, "{ \"m2m:cin\": {\"rn\": \"sentence" + Random(20).toString() + "\",\"cnf\":\"text/plain:0\",\"con\": \"" + string + "\"} }\n");
+          RequestBody body = RequestBody.create(mediaType, "{ \"m2m:cin\": {\"rn\": \"sentence" + Random.Default.nextInt() + "\",\"cnf\":\"text/plain:0\",\"con\": \"" + string + "\"} }\n");
           Request request = new Request.Builder()
                   .url("http://192.168.1.78:7579/onem2m/butler/speakcnt")
                   .method("POST", body)
@@ -346,6 +346,15 @@ public abstract class VisionProcessorBase<T> implements VisionImageProcessor {
           Response response = client.newCall(request).execute();
         } catch (Exception e) {
           Log.e("BUTLER MSG ERROR", e.getMessage());
+          String jsn = e.getMessage();
+          MqttMessage send = new MqttMessage();
+          assert jsn != null;
+          send.setPayload(jsn.getBytes());
+          try {
+            AppData.getInstance().mqttClient.publish("/error", send);
+          } catch (MqttException mqttException) {
+            mqttException.printStackTrace();
+          }
         }
       }
     }.start();
