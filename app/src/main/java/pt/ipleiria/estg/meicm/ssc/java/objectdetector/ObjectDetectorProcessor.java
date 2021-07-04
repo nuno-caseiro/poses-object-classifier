@@ -106,6 +106,7 @@ public class ObjectDetectorProcessor extends VisionProcessorBase<List<DetectedOb
                         }
                         sendMqttMsg(AppData.getInstance().alarmBuzz,"off");
                         appData.countForDice = 0;
+                        appData.sequence = new int[]{0,0,0};
                         break;
                     default:
                         Log.d("Handle class", "Default");
