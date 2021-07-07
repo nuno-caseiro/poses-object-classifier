@@ -12,10 +12,11 @@ public class AppData {
     public String previousPose = "";
     public String actualPose = "";
     public MqttAndroidClient mqttClient = null;
-    public int led6 = 1029;
-    public int alarmBuzz = 1030;
 
-    public final int led1 = 1031;
+    public int alarmBuzz = 1030;
+    public int led6 = 1029;
+
+    public int led1 = 1031;
     public int led2 = 1032;
     public int led3 = 1033;
     public int led4 = 1034;
@@ -24,18 +25,17 @@ public class AppData {
     public HashMap<String, String> states = new HashMap<>();
 
     public int countForDice = 0;
-    public int[] sequence = new int[]{0,0,0};
-    public int[] sequenceToAchieve = new int[]{1,2,3};
+    public int[] sequence = new int[]{0, 0, 0};
+    public int[] sequenceToAchieve = new int[]{1, 2, 3};
 
 
     // private constructor restricted to this class itself
-    private AppData()
-    {
-       resetStates();
+    private AppData() {
+        resetStates();
     }
 
-    public int getId(int id){
-        switch (id){
+    public int getId(int id) {
+        switch (id) {
             case 1:
                 return led1;
             case 2:
@@ -53,10 +53,9 @@ public class AppData {
         }
 
         return 0;
-
     }
 
-    public void resetStates(){
+    public void resetStates() {
         states.put("led1", "off");
         states.put("led2", "off");
         states.put("led3", "off");
@@ -68,8 +67,7 @@ public class AppData {
     }
 
     // static method to create instance of Singleton class
-    public static AppData getInstance()
-    {
+    public static AppData getInstance() {
         if (instance == null)
             instance = new AppData();
 
