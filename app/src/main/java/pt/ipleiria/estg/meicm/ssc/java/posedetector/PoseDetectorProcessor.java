@@ -141,8 +141,7 @@ public class PoseDetectorProcessor
           case "alert":
             sendMqttMsg(appData.led6, "on");
             sendMqttMsg(appData.alarmBuzz, "on");
-            //TODO UNCOMMENT
-            //sendEmail("nunocas3iro@gmail.com","ALERT", "PLEASE HELP");
+            sendEmail("arcismarthome@gmail.com","ALERT", "PLEASE HELP");
             msgToButler("ENVIEI ALERTA PARA AS AUTORIDADES");
             break;
           case "cold":

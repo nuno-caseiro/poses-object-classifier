@@ -46,6 +46,12 @@ android {
     aaptOptions {
         noCompress "tflite"
     }
+    packagingOptions {
+       exclude 'META-INF/NOTICE.md'
+        exclude 'META-INF/LICENSE.md'
+    }
+
+
 }
 
 repositories {

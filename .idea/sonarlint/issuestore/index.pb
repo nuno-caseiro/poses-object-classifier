@@ -30,10 +30,6 @@ r
 Bapp/src/main/java/pt/ipleiria/estg/meicm/ssc/CameraXViewModel.java,c/d/cdc11ed1aeba3f1d9809cfc4dd7740463339f607
 Å
 Qapp/src/main/java/pt/ipleiria/estg/meicm/ssc/java/CameraXLivePreviewActivity.java,5/f/5f2b65d196ef7f981ac1de2bce2b320a8264d3d9
-z
-Japp/src/main/java/pt/ipleiria/estg/meicm/ssc/java/LivePreviewActivity.java,9/1/91eaf7aea10c5e6c646c3e7b37a8a0f97ad9a734
-<
-build.gradle,f/0/f07866736216be0ee2aba49e392191aeae700a35
 A
 gradle.properties,2/a/2afbb999f001938c88fa43fc2ef52abf0f8213e4
 ?
